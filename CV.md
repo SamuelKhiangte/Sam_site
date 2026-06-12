@@ -43,8 +43,8 @@ PhD researcher at IISc Bangalore with 3+ years of hands-on experience building d
 ---
 
 ## PUBLICATIONS & RESEARCH OUTPUT
-- **Khiangte SZ** et al. *"Actin waves guide an outward movement of microclusters in the lymphocyte immunological synapse."* EMBO Reports, 27, 834–852 (2026). DOI: [10.1038/s44319-025-00676-2](https://doi.org/10.1038/s44319-025-00676-2) — Featured in the Times of India.
-- **Khiangte SZ** et al. *"Data-driven investigation of interfacial fluctuations in binary fluid turbulence."* arXiv:2603.02341 (2026) — applies time series and ML analysis to complex dynamical systems.
+- Dey, A., **Khiangte, S.Z.**, Mandal, S. et al. *"Actin waves guide an outward movement of microclusters in the lymphocyte immunological synapse."* EMBO Rep 27, 834–852 (2026). DOI: [10.1038/s44319-025-00676-2](https://doi.org/10.1038/s44319-025-00676-2) — Featured in the Times of India.
+- **Samuel Z Khiangte**, Triparna Sanyal, Sumantra Sarkar, Nairita Pal. *"Interface Fluctuations in a Turbulent Binary Fluid using Data-Driven Methods."* arXiv:2603.02341 (2026). DOI: [10.48550/arXiv.2603.02341](https://doi.org/10.48550/arXiv.2603.02341)
 
 ---
 
