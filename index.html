@@ -78,11 +78,21 @@
 
         <!-- Interactive Simulation Section -->
         <section id="sim">
-            <h2>Active Matter Simulation</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-                Interact with this live simulation of cellular active matter collectives. The particles represent active cells displaying self-propelled motion. Colored links (bonds) form dynamically as cells cluster. 
-                <strong>Adjust variables below to observe phase transitions, or click on the canvas to place/remove obstacles:</strong>
-            </p>
+            <h2>What is Active Matter?</h2>
+            <div style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1rem; color: var(--text-secondary);">
+                <p>
+                    <strong>Active matter</strong> refers to assemblies of individual agents—such as biological cells, bacteria, or synthetic micro-swimmers—that consume energy from their environment or internal stores to generate self-propelled motion. Unlike passive systems governed by classical thermodynamics, active matter is inherently out of thermodynamic equilibrium.
+                </p>
+                <p>
+                    This local energy consumption gives rise to spectacular collective phenomena, including flocking, swarming, active phase separation, and the formation of dynamic network structures. In cellular biophysics, active forces drive crucial processes like tissue development, wound healing, and tumor metastasis.
+                </p>
+                <p style="color: var(--text-primary);">
+                    <strong>Interactive Collective Simulation:</strong> Below is a live simulation modeling these out-of-equilibrium dynamics. The agents align their direction of motion with neighboring particles (alignment rules). When they touch, they form transient physical connections (represented by the purple lines) that simulate cell-cell adhesion forces. 
+                </p>
+                <p style="font-weight: 500; color: var(--accent-solid);">
+                    Adjust the parameters below to explore phase transitions, or click anywhere on the canvas to place or remove obstacles:
+                </p>
+            </div>
             <div class="sim-container">
                 <div class="sim-canvas-wrapper">
                     <canvas id="simulation-canvas"></canvas>
