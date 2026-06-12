@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Khiangte | Academic Portfolio</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Academic Portfolio of Samuel Khiangte - Theoretical Physicist & Machine Learning Researcher at the Indian Institute of Science (IISc) researching active matter, statistical physics, and deep learning.">
+    <meta name="keywords" content="Samuel Khiangte, IISc, Indian Institute of Science, Active Matter, Machine Learning, Theoretical Physics, JAX, Deep Learning, GNN, Biophysics">
+    <meta name="author" content="Samuel Khiangte">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <span class="affiliation">Indian Institute of Science</span>
+        <h1>Samuel Khiangte</h1>
+        <p>Theoretical Physicist & Machine Learning Researcher</p>
+        <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 1rem;">
+            <a href="#about" class="btn">Learn More</a>
+            <a href="#papers" class="btn btn-secondary">Selected Papers</a>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#sim">Interactive Sim</a></li>
+            <li><a href="#cv">CV & Skills</a></li>
+            <li><a href="#papers">Publications</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <!-- About Section -->
+        <section id="about" class="glass-panel">
+            <h2>About Me</h2>
+            <div class="grid-2">
+                <div>
+                    <p style="margin-bottom: 1.25rem; font-size: 1.1rem; color: var(--text-primary);">
+                        Welcome! I am a researcher based at the <strong>Indian Institute of Science (IISc)</strong>. My work lies at the intersection of statistical physics and deep learning. I focus on the theoretical modeling of soft matter, coarse-grained active dynamics, and smart agent collectives.
+                    </p>
+                    <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">
+                        I actively leverage machine learning architectures—such as Graph Neural Networks (GNNs) and Transformers—alongside JAX and TensorFlow to understand non-equilibrium systems and biological agents. Whether I am deriving cluster expansion equations or managing large-scale HPC cluster simulations, my goal is to uncover the underlying rules governing complex physical systems.
+                    </p>
+                    <p style="color: var(--text-secondary);">
+                        My research aims to build bridge frameworks where physical constraints are embedded directly into neural architectures to facilitate the modeling of active biological cell matrices, and dynamic cell-cell adhesion behaviors.
+                    </p>
+                </div>
+                <div>
+                    <div class="skills-list" style="margin-top: 0;">
+                        <span class="skill-tag">Statistical Physics</span>
+                        <span class="skill-tag">Active Matter Dynamics</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Graph Neural Networks</span>
+                        <span class="skill-tag">JAX / TensorFlow</span>
+                        <span class="skill-tag">High-Performance Computing</span>
+                        <span class="skill-tag">Numerical Simulations</span>
+                        <span class="skill-tag">Biophysics Modeling</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Simulation Section -->
+        <section id="sim">
+            <h2>Active Matter Simulation</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                Interact with this live simulation of cellular active matter collectives. The particles represent active cells displaying self-propelled motion. Colored links (bonds) form dynamically as cells cluster. 
+                <strong>Adjust variables below to observe phase transitions, or click on the canvas to place/remove obstacles:</strong>
+            </p>
+            <div class="sim-container">
+                <div class="sim-canvas-wrapper">
+                    <canvas id="simulation-canvas"></canvas>
+                </div>
+                <div class="sim-controls-panel" id="sim-controls">
+                    <h3>Simulation Controls</h3>
+                    
+                    <div class="sim-group">
+                        <label for="param-speed">Velocity <span id="param-speed-val">2.0</span></label>
+                        <input type="range" id="param-speed" min="0.5" max="5.0" step="0.1" value="2.0">
+                    </div>
+
+                    <div class="sim-group">
+                        <label for="param-alignment">Alignment Force <span id="param-alignment-val">1.5</span></label>
+                        <input type="range" id="param-alignment" min="0.0" max="4.0" step="0.1" value="1.5">
+                    </div>
+
+                    <div class="sim-group">
+                        <label for="param-adhesion">Adhesion Strength <span id="param-adhesion-val">2.0</span></label>
+                        <input type="range" id="param-adhesion" min="0.0" max="5.0" step="0.2" value="2.0">
+                    </div>
+
+                    <div class="sim-group">
+                        <label for="param-obstacles">Obstacle Count <span id="param-obstacles-val">4</span></label>
+                        <input type="range" id="param-obstacles" min="0" max="10" step="1" value="4">
+                    </div>
+
+                    <button id="btn-reset-sim" class="btn" style="margin-top: 1rem; width: 100%;">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                        Reset Simulation
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CV & Timeline Section -->
+        <section id="cv" class="glass-panel">
+            <h2>Curriculum Vitae</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">A comprehensive overview of my academic background, technical skills (Python, NumPy, LaTeX, High-Performance Computing), and research experience.</p>
+            
+            <div class="cv-block">
+                <div class="cv-item">
+                    <div class="cv-meta">
+                        <span class="cv-title">Research Fellow / Associate</span>
+                        <span class="cv-duration">2024 - Present</span>
+                    </div>
+                    <div class="cv-org">Indian Institute of Science (IISc), Bangalore</div>
+                    <p class="cv-description">Conducting research at the intersection of statistical mechanics and machine learning. Developing models for active collectives, studying cell-cell adhesion mechanisms, and running large-scale HPC simulations with JAX.</p>
+                </div>
+                
+                <div class="cv-item">
+                    <div class="cv-meta">
+                        <span class="cv-title">Doctoral Researcher (Physics)</span>
+                        <span class="cv-duration">2019 - 2024</span>
+                    </div>
+                    <div class="cv-org">Indian Institute of Science (IISc), Bangalore</div>
+                    <p class="cv-description">Researched soft matter mechanics, non-equilibrium systems, and active agent models. Authored papers on topological edge modes and biological synapse systems.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+                <div>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.5rem;">Looking for details?</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary);">Download the full CV to review publications, teaching records, and academic service.</p>
+                </div>
+                <a href="./CV.pdf" class="btn" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                    Download Full CV (PDF)
+                </a>
+            </div>
+        </section>
+
+        <!-- Selected Publications Section -->
+        <section id="papers">
+            <h2>Selected Publications & Preprints</h2>
+            <div class="pub-list">
+                <div class="pub-item">
+                    <span class="pub-tag">Journal Paper</span>
+                    <h3 class="pub-title">Topological Edge Modes in Oscillating Deformable Particles</h3>
+                    <div class="pub-authors"><strong>Samuel Khiangte</strong>, et al.</div>
+                    <div class="pub-venue">Journal of Statistical Physics & Soft Matter, 2026</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/" class="pub-link" target="_blank">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            arXiv preprint
+                        </a>
+                        <a href="#" class="pub-link" target="_blank">Publisher Link</a>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <span class="pub-tag">Preprint</span>
+                    <h3 class="pub-title">Learning Interaction Rules in Coarse-Grained Active Matter using GNNs</h3>
+                    <div class="pub-authors"><strong>Samuel Khiangte</strong>, et al.</div>
+                    <div class="pub-venue">arXiv/Biophysics, 2025</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/" class="pub-link" target="_blank">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            arXiv preprint
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Gallery Section -->
+        <section id="gallery">
+            <h2>Research Gallery & Simulations</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Visualizations of computational analysis, active cell simulations, and synapse modeling workflows.</p>
+            <div class="grid-cards">
+                
+                <!-- Card 1: Active Matter -->
+                <div class="media-card">
+                    <div class="media-preview">
+                        <img src="./active_matter.png" alt="Simulation of Active Matter Collectives">
+                    </div>
+                    <div class="media-content">
+                        <h3>Simulating Smart Agent Collectives</h3>
+                        <p>Periodic boundary conditions applied to active matter dynamics to study alignment, phase transitions, and collective movement patterns.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Synapse Modeling -->
+                <div class="media-card">
+                    <div class="media-preview">
+                        <img src="./synapse_modeling.png" alt="Immunological Synapse Modeling Representation">
+                    </div>
+                    <div class="media-content">
+                        <h3>Immunological Synapse Modeling</h3>
+                        <p>Modeling T-cell and antigen-presenting cell contact junctions using custom-developed neural network potentials and spatial constraints.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: HPC Cluster -->
+                <div class="media-card">
+                    <div class="media-preview">
+                        <img src="./hpc_cluster.png" alt="High-Performance Computing cluster artwork">
+                    </div>
+                    <div class="media-content">
+                        <h3>High-Performance Simulations</h3>
+                        <p>Large-scale GPU-accelerated computing cluster workflow setup to train and run CMA-ES parameters sweep simulations for biological systems.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="glass-panel">
+            <h2>Beyond the Lab: Hobbies</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">When I am not writing custom training loops or diving into biophysics theory, I enjoy stepping away from the screen. Here are a few things I love to do in my free time:</p>
+            
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <div class="hobby-icon">🥾</div>
+                    <h3>Hiking in Karnataka</h3>
+                    <p>Exploring the Western Ghats and various trekking trails around Karnataka.</p>
+                </div>
+                
+                <div class="hobby-card">
+                    <div class="hobby-icon">📚</div>
+                    <h3>Reading Sci-Fi</h3>
+                    <p>Fascinated by hard science fiction novels and speculative technology futures.</p>
+                </div>
+
+                <div class="hobby-card">
+                    <div class="hobby-icon">📸</div>
+                    <h3>Photography</h3>
+                    <p>Capturing landscapes, nature close-ups, and campus scenery at IISc.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Contact & Social Footer -->
+    <footer id="contact">
+        <div class="social-links">
+            <a href="https://github.com" class="social-link" title="GitHub" target="_blank">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="mailto:samuel@iisc.ac.in" class="social-link" title="Email" target="_blank">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6"/></svg>
+            </a>
+            <a href="https://scholar.google.com" class="social-link" title="Google Scholar" target="_blank">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5zM6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+            </a>
+        </div>
+        <p class="footer-text">&copy; 2026 Samuel Khiangte. All rights reserved.</p>
+        <p class="footer-text" style="margin-top: 0.5rem; font-size: 0.8rem;">Designed & Built for GitHub Pages hosting</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./simulation.js"></script>
+</body>
+</html>
