@@ -676,3 +676,93 @@ footer {
         padding: 0.4rem 0.8rem;
     }
 }
+
+/* Collapsible Publication Details */
+.pub-details {
+    margin-top: 1.25rem;
+    background: rgba(9, 13, 22, 0.4);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.pub-details[open] {
+    border-color: rgba(59, 130, 246, 0.3);
+    background: rgba(9, 13, 22, 0.6);
+}
+
+.pub-details summary {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-solid);
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    list-style: none; /* Hide default arrow */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pub-details summary::-webkit-details-marker {
+    display: none; /* Hide default arrow in Safari */
+}
+
+.pub-details summary::before {
+    content: '▶';
+    font-size: 0.75rem;
+    transition: transform 0.2s ease;
+    display: inline-block;
+    color: var(--text-muted);
+}
+
+.pub-details[open] summary::before {
+    transform: rotate(90deg);
+    color: var(--accent-solid);
+}
+
+.pub-details-content {
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.pub-details-content h4 {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    margin: 1.25rem 0 0.5rem 0;
+    font-family: var(--font-heading);
+}
+
+.pub-details-content h4:first-of-type {
+    margin-top: 0;
+}
+
+.pub-details-content p {
+    margin-bottom: 0.75rem;
+}
+
+.pub-details-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.pub-details-content ul li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.pub-details-content ul li::before {
+    content: '•';
+    color: var(--accent-solid);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}

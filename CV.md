@@ -43,7 +43,7 @@ PhD researcher at IISc Bangalore with 3+ years of hands-on experience building d
 ---
 
 ## PUBLICATIONS & RESEARCH OUTPUT
-- Dey, A., **Khiangte, S.Z.**, Mandal, S. et al. *"Actin waves guide an outward movement of microclusters in the lymphocyte immunological synapse."* EMBO Rep 27, 834–852 (2026). DOI: [10.1038/s44319-025-00676-2](https://doi.org/10.1038/s44319-025-00676-2) — Featured in the Times of India.
+- Dey, A., **Khiangte, S.Z.**, Mandal, S. et al. *"Actin waves guide an outward movement of microclusters in the lymphocyte immunological synapse."* EMBO Rep 27, 834–852 (2026). DOI: [10.1038/s44319-025-00676-2](https://doi.org/10.1038/s44319-025-00676-2) — Featured in the [Times of India](https://timesofindia.indiatimes.com/india/actin-waves-help-t-cells-reuse-key-receptors-iisc-study/articleshow/126581874.cms) and [Phys.org](https://phys.org/news/2026-01-actin-wavefronts-cell-receptors-endocytosis.html).
 - **Samuel Z Khiangte**, Triparna Sanyal, Sumantra Sarkar, Nairita Pal. *"Interface Fluctuations in a Turbulent Binary Fluid using Data-Driven Methods."* arXiv:2603.02341 (2026). DOI: [10.48550/arXiv.2603.02341](https://doi.org/10.48550/arXiv.2603.02341)
 
 ---

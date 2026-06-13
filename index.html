@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samuel Zomawia Khiangte | Academic Portfolio</title>
-    
+
     <!-- Meta tags for SEO -->
-    <meta name="description" content="Academic Portfolio of Samuel Zomawia Khiangte - PhD Researcher in Machine Learning & Biophysics at the Indian Institute of Science (IISc). Specializing in deep learning, computer vision, and active matter.">
-    <meta name="keywords" content="Samuel Zomawia Khiangte, Samuel Khiangte, IISc, Indian Institute of Science, Active Matter, Machine Learning, Deep Learning, Biophysics, EMBO Reports, Fluid Dynamics">
+    <meta name="description"
+        content="Academic Portfolio of Samuel Zomawia Khiangte - PhD Researcher in Machine Learning & Biophysics at the Indian Institute of Science (IISc). Specializing in deep learning, computer vision, and active matter.">
+    <meta name="keywords"
+        content="Samuel Zomawia Khiangte, Samuel Khiangte, IISc, Indian Institute of Science, Active Matter, Machine Learning, Deep Learning, Biophysics, EMBO Reports, Fluid Dynamics">
     <meta name="author" content="Samuel Zomawia Khiangte">
-    
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
 
     <!-- Header Section -->
@@ -40,24 +44,33 @@
     </nav>
 
     <div class="container">
-        
+
         <!-- About Section -->
         <section id="about" class="glass-panel">
             <h2>About Me</h2>
             <div class="grid-2">
                 <div>
                     <p style="margin-bottom: 1.25rem; font-size: 1.1rem; color: var(--text-primary);">
-                        I am a PhD researcher at the <strong>Indian Institute of Science (IISc), Bangalore</strong>, with over 3 years of hands-on experience building deep learning and computer vision pipelines for large-scale scientific datasets.
+                        I am a PhD researcher at the <strong>Indian Institute of Science (IISc), Bangalore</strong>,
+                        with over 3 years of hands-on experience building deep learning and computer vision pipelines
+                        for large-scale scientific datasets.
                     </p>
                     <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">
-                        My research lies at the convergence of statistical mechanics, biological physics, and machine learning. I specialize in developing model-driven and data-driven computational methods—utilizing frameworks like TensorFlow, Keras, and JAX—to investigate complex dynamical systems, cell membrane fluctuations, and smart agent collectives.
+                        My research lies at the convergence of statistical mechanics, biological physics, and machine
+                        learning. I specialize in developing model-driven and data-driven computational
+                        methods—utilizing frameworks like TensorFlow, Keras, and JAX—to investigate complex dynamical
+                        systems, cell membrane fluctuations, and smart agent collectives.
                     </p>
                     <p style="color: var(--text-secondary);">
-                        I am highly driven to translate cutting-edge AI/ML research into robust, real-world engineering and diagnostic tools for clinical decision support, materials physics, and industrial fluid dynamics.
+                        I am highly driven to translate cutting-edge AI/ML research into robust, real-world engineering
+                        and diagnostic tools for clinical decision support, materials physics, and industrial fluid
+                        dynamics.
                     </p>
                 </div>
                 <div>
-                    <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--text-primary);">Core Technical Profile</h3>
+                    <h3
+                        style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--text-primary);">
+                        Core Technical Profile</h3>
                     <div class="skills-list" style="margin-top: 0;">
                         <span class="skill-tag">TensorFlow & Keras</span>
                         <span class="skill-tag">JAX / Flax</span>
@@ -79,18 +92,29 @@
         <!-- Interactive Simulation Section -->
         <section id="sim">
             <h2>What is Active Matter?</h2>
-            <div style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1rem; color: var(--text-secondary);">
+            <div
+                style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1rem; color: var(--text-secondary);">
                 <p>
-                    <strong>Active matter</strong> refers to assemblies of individual agents—such as biological cells, bacteria, or synthetic micro-swimmers—that consume energy from their environment or internal stores to generate self-propelled motion. Unlike passive systems governed by classical thermodynamics, active matter is inherently out of thermodynamic equilibrium.
+                    <strong>Active matter</strong> refers to assemblies of individual agents—such as biological cells,
+                    bacteria, or synthetic micro-swimmers—that consume energy from their environment or internal stores
+                    to generate self-propelled motion. Unlike passive systems governed by classical thermodynamics,
+                    active matter is inherently out of thermodynamic equilibrium.
                 </p>
                 <p>
-                    This local energy consumption gives rise to spectacular collective phenomena, including flocking, swarming, active phase separation, and the formation of dynamic network structures. In cellular biophysics, active forces drive crucial processes like tissue development, wound healing, and tumor metastasis.
+                    This local energy consumption gives rise to spectacular collective phenomena, including flocking,
+                    swarming, active phase separation, and the formation of dynamic network structures. In cellular
+                    biophysics, active forces drive crucial processes like tissue development, wound healing, and tumor
+                    metastasis.
                 </p>
                 <p style="color: var(--text-primary);">
-                    <strong>Interactive Collective Simulation:</strong> Below is a live simulation modeling these out-of-equilibrium dynamics. The agents align their direction of motion with neighboring particles (alignment rules). When they touch, they form transient physical connections (represented by the purple lines) that simulate cell-cell adhesion forces. 
+                    <strong>Interactive Collective Simulation:</strong> Below is a live simulation modeling these
+                    out-of-equilibrium dynamics. The agents align their direction of motion with neighboring particles
+                    (alignment rules). When they touch, they form transient physical connections (represented by the
+                    purple lines) that simulate cell-cell adhesion forces.
                 </p>
                 <p style="font-weight: 500; color: var(--accent-solid);">
-                    Adjust the parameters below to explore phase transitions, or click anywhere on the canvas to place or remove obstacles:
+                    Adjust the parameters below to explore phase transitions, or click anywhere on the canvas to place
+                    or remove obstacles:
                 </p>
             </div>
             <div class="sim-container">
@@ -99,7 +123,7 @@
                 </div>
                 <div class="sim-controls-panel" id="sim-controls">
                     <h3>Simulation Controls</h3>
-                    
+
                     <div class="sim-group">
                         <label for="param-speed">Velocity <span id="param-speed-val">2.0</span></label>
                         <input type="range" id="param-speed" min="0.5" max="5.0" step="0.1" value="2.0">
@@ -121,7 +145,9 @@
                     </div>
 
                     <button id="btn-reset-sim" class="btn" style="margin-top: 1rem; width: 100%;">
-                        <svg class="icon" viewBox="0 0 24 24"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+                        </svg>
                         Reset Simulation
                     </button>
                 </div>
@@ -131,9 +157,11 @@
         <!-- CV & Timeline Section -->
         <section id="cv" class="glass-panel">
             <h2>Curriculum Vitae & Experience</h2>
-            
+
             <div style="margin-bottom: 3rem;">
-                <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 1.5rem; color: var(--accent-solid); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Research Experience</h3>
+                <h3
+                    style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 1.5rem; color: var(--accent-solid); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+                    Research Experience</h3>
                 <div class="cv-block">
                     <div class="cv-item">
                         <div class="cv-meta">
@@ -141,29 +169,43 @@
                             <span class="cv-duration">2023 - Present</span>
                         </div>
                         <div class="cv-org">Indian Institute of Science (IISc), Bangalore</div>
-                        <ul style="margin-left: 1.25rem; color: var(--text-secondary); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
-                            <li>Designed and deployed a deep learning pipeline (CNNs + computer vision) to diagnose rheumatoid arthritis from fluorescence microscopy images of immune cells—translating high-dimensional visual data into a clinical decision-support tool.</li>
-                            <li>Applied data-driven computational methods to investigate interfacial fluctuations in binary fluid turbulence—a complex time-series modelling problem involving large-scale simulation data. Work submitted as arXiv preprint (arXiv:2603.02341).</li>
-                            <li>Built and evaluated object detection algorithms to characterise a previously undescribed class of cytoskeletal dynamics in T cells, enabling quantitative analysis across large image datasets.</li>
-                            <li>Implemented Graph Neural Networks (GNNs) in JAX to model active interaction networks in actin cytoskeleton dynamics, validating model performance against experimental observations.</li>
+                        <ul
+                            style="margin-left: 1.25rem; color: var(--text-secondary); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                            <li>Designed and deployed a deep learning pipeline (CNNs + computer vision) to diagnose
+                                rheumatoid arthritis from fluorescence microscopy images of immune cells—translating
+                                high-dimensional visual data into a clinical decision-support tool.</li>
+                            <li>Applied data-driven computational methods to investigate interfacial fluctuations in
+                                binary fluid turbulence—a complex time-series modelling problem involving large-scale
+                                simulation data. Work submitted as arXiv preprint (arXiv:2603.02341).</li>
+                            <li>Built and evaluated object detection algorithms to characterise a previously undescribed
+                                class of cytoskeletal dynamics in T cells, enabling quantitative analysis across large
+                                image datasets.</li>
+                            <li>Implemented Graph Neural Networks (GNNs) in JAX to model active interaction networks in
+                                actin cytoskeleton dynamics, validating model performance against experimental
+                                observations.</li>
                         </ul>
                     </div>
-                    
+
                     <div class="cv-item">
                         <div class="cv-meta">
                             <span class="cv-title">Teaching Assistant</span>
                             <span class="cv-duration">2024 - 2025</span>
                         </div>
                         <div class="cv-org">Indian Institute of Science (IISc), Bangalore</div>
-                        <ul style="margin-left: 1.25rem; color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">
-                            <li>Designed assessments and delivered tutorials for graduate courses in Computational Physics, Biophysics, and Mathematics; mentored students on Python-based scientific computing and ML methods.</li>
+                        <ul
+                            style="margin-left: 1.25rem; color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">
+                            <li>Designed assessments and delivered tutorials for graduate courses in Computational
+                                Physics, Biophysics, and Mathematics; mentored students on Python-based scientific
+                                computing and ML methods.</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div style="margin-bottom: 3rem;">
-                <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 1.5rem; color: var(--accent-solid); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Education</h3>
+                <h3
+                    style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 1.5rem; color: var(--accent-solid); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+                    Education</h3>
                 <div class="cv-block">
                     <div class="cv-item">
                         <div class="cv-meta">
@@ -172,7 +214,8 @@
                         </div>
                         <div class="cv-org">Indian Institute of Science (IISc), Bangalore</div>
                         <p class="cv-description" style="margin-top: 0.25rem;">
-                            Focus: Machine Learning, Deep Learning, Computational Physics, Statistical Mechanics, Biological Physics.
+                            Focus: Machine Learning, Deep Learning, Computational Physics, Statistical Mechanics,
+                            Biological Physics.
                         </p>
                     </div>
 
@@ -187,20 +230,30 @@
             </div>
 
             <div>
-                <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 1.5rem; color: var(--accent-solid); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Conferences & Presentations</h3>
-                <ul style="margin-left: 1.25rem; color: var(--text-secondary); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                    <li><strong>Frontiers in Nonequilibrium Statistical Mechanics (2025)</strong> — Poster Presentation, IMSC Chennai.</li>
-                    <li><strong>CompFlu — Annual Meeting of Complex Fluids and Soft Matter (2025)</strong> — Event Organiser & Presenter, IISc Bangalore.</li>
+                <h3
+                    style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 1.5rem; color: var(--accent-solid); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+                    Conferences & Presentations</h3>
+                <ul
+                    style="margin-left: 1.25rem; color: var(--text-secondary); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li><strong>Frontiers in Nonequilibrium Statistical Mechanics (2025)</strong> — Poster Presentation,
+                        IMSC Chennai.</li>
+                    <li><strong>CompFlu — Annual Meeting of Complex Fluids and Soft Matter (2025)</strong> — Event
+                        Organiser & Presenter, IISc Bangalore.</li>
                 </ul>
             </div>
 
-            <div style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; border-top: 1px solid var(--border-color); padding-top: 2rem;">
+            <div
+                style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; border-top: 1px solid var(--border-color); padding-top: 2rem;">
                 <div>
-                    <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.5rem;">Curriculum Vitae Document</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-secondary);">Download the full document to review complete academic coursework, teaching history, and skills list.</p>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.5rem;">Curriculum
+                        Vitae Document</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary);">Download the full document to review
+                        complete academic coursework, teaching history, and skills list.</p>
                 </div>
                 <a href="./CV.pdf" class="btn" target="_blank">
-                    <svg class="icon" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                    </svg>
                     Download Full CV (PDF)
                 </a>
             </div>
@@ -210,34 +263,117 @@
         <section id="papers">
             <h2>Selected Publications & Preprints</h2>
             <div class="pub-list">
-                
+
                 <div class="pub-item">
-                    <span class="pub-tag" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">EMBO Reports (Featured in TOI)</span>
-                    <h3 class="pub-title">Actin waves guide an outward movement of microclusters in the lymphocyte immunological synapse</h3>
+                    <span class="pub-tag" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">EMBO
+                        Reports (Featured in TOI & Phys.org)</span>
+                    <h3 class="pub-title">Actin waves guide an outward movement of microclusters in the lymphocyte
+                        immunological synapse</h3>
                     <div class="pub-authors">Dey, A., <strong>Khiangte, S.Z.</strong>, Mandal, S. et al.</div>
                     <div class="pub-venue">EMBO Rep 27, 834–852 (2026)</div>
                     <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
-                        Investigates cytoskeletal actin flows and lymphocyte microcluster dynamics. Featured in the <em>Times of India</em>.
+                        Investigates cytoskeletal actin flows and lymphocyte microcluster dynamics. Featured in the
+                        <em>Times of India</em> and <em>Phys.org</em>.
                     </p>
                     <div class="pub-links">
                         <a href="https://doi.org/10.1038/s44319-025-00676-2" class="pub-link" target="_blank">
-                            <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path
+                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                            </svg>
                             DOI / Publisher Link
                         </a>
+                        <a href="https://timesofindia.indiatimes.com/india/actin-waves-help-t-cells-reuse-key-receptors-iisc-study/articleshow/126581874.cms"
+                            class="pub-link" target="_blank">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path
+                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                            </svg>
+                            Times of India Feature
+                        </a>
+                        <a href="https://phys.org/news/2026-01-actin-wavefronts-cell-receptors-endocytosis.html"
+                            class="pub-link" target="_blank">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path
+                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                            </svg>
+                            Phys.org Feature
+                        </a>
+                        <a href="./primary_waves.avi" class="pub-link" target="_blank" download>
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path
+                                    d="M23 7a2 2 0 0 0-2-2H3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V7zM10 15V9l6 3-6 3z" />
+                            </svg>
+                            Download Primary Waves Video (AVI)
+                        </a>
                     </div>
+
+                    <details class="pub-details">
+                        <summary>Study Summary & Key Findings</summary>
+                        <div class="pub-details-content">
+                            <h4>The Experimental System</h4>
+                            <p>The study investigates the complex cytoskeletal mechanics of the immunological
+                                synapse—the specialized contact junction between a T cell and an antigen-presenting cell
+                                (APC) that initiates the adaptive immune response.</p>
+                            <p>To study this, the researchers utilized a highly controlled <em>in vitro</em> system:</p>
+                            <ul>
+                                <li><strong>Cells:</strong> Live primary murine T cells (both CD8+ and CD4+) compared
+                                    against a commonly used immortalized T cell line (Jurkat cells).</li>
+                                <li><strong>Activation Platform:</strong> Glass-supported lipid bilayers (SLBs)
+                                    reconstituted with specific ligands (like anti-CD3 and ICAM1) to artificially mimic
+                                    the surface of an antigen-presenting cell.</li>
+                                <li><strong>Imaging:</strong> Total Internal Reflection-Structured Illumination
+                                    Microscopy (TIRF-SIM), combined with computational tracking, to visualize and
+                                    quantify the incredibly fast, microscale movements of F-actin and T cell receptor
+                                    (TCR) microclusters in real time.</li>
+                            </ul>
+
+                            <h4>Key Findings</h4>
+                            <p>Traditionally, TCR microclusters were understood to flow retrogradely (inward) toward the
+                                central supramolecular activation cluster (cSMAC) for degradation. However, this study
+                                uncovered a parallel process:</p>
+                            <ul>
+                                <li><strong>Discovery of Outward TCR Movement:</strong> While Jurkat cell lines mostly
+                                    exhibited the expected inward receptor flow, primary T cells showed a radically
+                                    different behavior. In primary cells, a significant portion (roughly 40%) of motile
+                                    TCR microclusters actually move anterogradely—outward toward the cell periphery,
+                                    away from the cSMAC.</li>
+                                <li><strong>Novel "Actin Waves":</strong> This outward receptor movement is physically
+                                    driven by previously uncharacterized, outward-propagating "actin waves". Uniquely,
+                                    these anterograde waves exist simultaneously in the same space as the standard
+                                    inward-pulling retrograde F-actin flows.</li>
+                                <li><strong>The Crucial Role of WASP:</strong> The Wiskott-Aldrich Syndrome Protein
+                                    (WASP) serves as the necessary molecular tether that couples the TCR microclusters
+                                    to these outward actin waves. In genetically modified T cells lacking WASP
+                                    (WASP-/-), the outward actin waves still occurred, but the receptors failed to
+                                    attach to them and "slipped," severely reducing their outward movement.</li>
+                                <li><strong>Signaling Homeostasis:</strong> This newly discovered dual-movement system
+                                    explains how roughly 50% of antigen receptors manage to escape degradation at the
+                                    center of the synapse. By sweeping a large fraction of receptors outward, the cell
+                                    actively maintains T cell receptor homeostasis and prolongs signaling viability
+                                    during an immune response.</li>
+                            </ul>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="pub-item">
                     <span class="pub-tag">Preprint</span>
-                    <h3 class="pub-title">Interface Fluctuations in a Turbulent Binary Fluid using Data-Driven Methods</h3>
-                    <div class="pub-authors"><strong>Samuel Z Khiangte</strong>, Triparna Sanyal, Sumantra Sarkar, Nairita Pal</div>
+                    <h3 class="pub-title">Interface Fluctuations in a Turbulent Binary Fluid using Data-Driven Methods
+                    </h3>
+                    <div class="pub-authors"><strong>Samuel Z Khiangte</strong>, Triparna Sanyal, Sumantra Sarkar,
+                        Nairita Pal</div>
                     <div class="pub-venue">arXiv preprint (arXiv:2603.02341), 2026</div>
                     <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
-                        Applies time series, machine learning analysis, and signal processing to study fluctuations in turbulent binary fluids.
+                        Applies time series, machine learning analysis, and signal processing to study fluctuations in
+                        turbulent binary fluids.
                     </p>
                     <div class="pub-links">
                         <a href="https://doi.org/10.48550/arXiv.2603.02341" class="pub-link" target="_blank">
-                            <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path
+                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                            </svg>
                             arXiv:2603.02341
                         </a>
                     </div>
@@ -249,9 +385,10 @@
         <!-- Research Gallery Section -->
         <section id="gallery">
             <h2>Research Gallery & Simulations</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Visualizations of computational analysis, active cell simulations, and synapse modeling workflows.</p>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Visualizations of computational analysis,
+                active cell simulations, and synapse modeling workflows.</p>
             <div class="grid-cards">
-                
+
                 <!-- Card 1: Active Matter -->
                 <div class="media-card">
                     <div class="media-preview">
@@ -259,7 +396,8 @@
                     </div>
                     <div class="media-content">
                         <h3>Simulating Smart Agent Collectives</h3>
-                        <p>Periodic boundary conditions applied to active matter dynamics to study alignment, phase transitions, and collective movement patterns.</p>
+                        <p>Periodic boundary conditions applied to active matter dynamics to study alignment, phase
+                            transitions, and collective movement patterns.</p>
                     </div>
                 </div>
 
@@ -270,7 +408,8 @@
                     </div>
                     <div class="media-content">
                         <h3>Immunological Synapse Modeling</h3>
-                        <p>Modeling T-cell and antigen-presenting cell contact junctions (lymphocyte synapse) using custom-developed neural network potentials and spatial constraints.</p>
+                        <p>Modeling T-cell and antigen-presenting cell contact junctions (lymphocyte synapse) using
+                            custom-developed neural network potentials and spatial constraints.</p>
                     </div>
                 </div>
 
@@ -281,7 +420,8 @@
                     </div>
                     <div class="media-content">
                         <h3>High-Performance Simulations</h3>
-                        <p>Large-scale GPU-accelerated computing cluster workflow setup to train and run CMA-ES parameters sweep simulations for biological systems.</p>
+                        <p>Large-scale GPU-accelerated computing cluster workflow setup to train and run CMA-ES
+                            parameters sweep simulations for biological systems.</p>
                     </div>
                 </div>
 
@@ -291,15 +431,17 @@
         <!-- Hobbies Section -->
         <section id="hobbies" class="glass-panel">
             <h2>Beyond the Lab: Hobbies</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 2rem;">When I am not writing custom training loops or diving into biophysics theory, I enjoy stepping away from the screen. Here are a few things I love to do in my free time:</p>
-            
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">When I am not writing custom training loops or
+                diving into biophysics theory, I enjoy stepping away from the screen. Here are a few things I love to do
+                in my free time:</p>
+
             <div class="hobbies-grid">
                 <div class="hobby-card">
                     <div class="hobby-icon">🥾</div>
                     <h3>Hiking in Karnataka</h3>
                     <p>Exploring the Western Ghats and various trekking trails around Karnataka.</p>
                 </div>
-                
+
                 <div class="hobby-card">
                     <div class="hobby-icon">📚</div>
                     <h3>Reading Sci-Fi</h3>
@@ -320,23 +462,36 @@
     <footer id="contact">
         <div class="social-links">
             <a href="https://github.com/SamuelKhiangte" class="social-link" title="GitHub" target="_blank">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
             </a>
             <a href="mailto:samuelk@iisc.ac.in" class="social-link" title="Email" target="_blank">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6"/></svg>
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path
+                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6" />
+                </svg>
             </a>
             <a href="https://linkedin.com/in/samuel-khiangte" class="social-link" title="LinkedIn" target="_blank">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2z"/></svg>
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path
+                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2z" />
+                </svg>
             </a>
             <a href="https://scholar.google.com" class="social-link" title="Google Scholar" target="_blank">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5zM6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5zM6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                </svg>
             </a>
         </div>
         <p class="footer-text">&copy; 2026 Samuel Zomawia Khiangte. All rights reserved.</p>
-        <p class="footer-text" style="margin-top: 0.5rem; font-size: 0.8rem;">Designed & Built for GitHub Pages hosting</p>
+        <p class="footer-text" style="margin-top: 0.5rem; font-size: 0.8rem;">Designed & Built for GitHub Pages hosting
+        </p>
     </footer>
 
     <!-- Scripts -->
     <script src="./simulation.js"></script>
 </body>
+
 </html>
