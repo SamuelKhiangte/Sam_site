@@ -4,18 +4,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap');
 
 :root {
-    --bg-dark: #090d16;
-    --bg-card: #121824;
-    --bg-card-hover: #1a2335;
-    --border-color: #1e293b;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
-    --accent-solid: #3b82f6;
-    --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-    --accent-gradient-hover: linear-gradient(135deg, #4f46e5 0%, #a855f7 100%);
-    --glass-bg: rgba(18, 24, 36, 0.75);
-    --glass-border: rgba(255, 255, 255, 0.05);
+    --bg-dark: #faf8f5;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f7f4ee;
+    --border-color: #e6dfd3;
+    --text-primary: #2d2924;
+    --text-secondary: #6b6257;
+    --text-muted: #8e8376;
+    --accent-solid: #c2593f;
+    --accent-gradient: linear-gradient(135deg, #c2593f 0%, #d97706 100%);
+    --accent-gradient-hover: linear-gradient(135deg, #ac482f 0%, #b45309 100%);
+    --glass-bg: rgba(250, 248, 245, 0.85);
+    --glass-border: rgba(230, 223, 211, 0.4);
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -61,8 +61,8 @@ body {
 header {
     position: relative;
     padding: 8rem 0 5rem 0;
-    background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 45%),
-                radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.1), transparent 40%);
+    background: radial-gradient(circle at top right, rgba(194, 89, 63, 0.12), transparent 45%),
+                radial-gradient(circle at bottom left, rgba(217, 119, 6, 0.08), transparent 40%);
     border-bottom: 1px solid var(--border-color);
     text-align: center;
     overflow: hidden;
@@ -148,13 +148,13 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(45, 41, 36, 0.05);
 }
 
 nav ul li a.active {
     color: var(--text-primary);
-    background: rgba(59, 130, 246, 0.15);
-    border: 1px solid rgba(59, 130, 246, 0.3);
+    background: rgba(194, 89, 63, 0.08);
+    border: 1px solid rgba(194, 89, 63, 0.2);
 }
 
 /* Sections */
@@ -213,8 +213,8 @@ h2::after {
 
 .glass-panel:hover {
     transform: translateY(-4px);
-    border-color: rgba(139, 92, 246, 0.3);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(194, 89, 63, 0.35);
+    box-shadow: 0 12px 30px rgba(45, 41, 36, 0.06);
 }
 
 /* Buttons */
@@ -237,18 +237,18 @@ h2::after {
 
 .btn:hover {
     background: var(--accent-gradient-hover);
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+    box-shadow: 0 4px 15px rgba(194, 89, 63, 0.25);
     transform: translateY(-2px);
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(45, 41, 36, 0.03);
     border: 1px solid var(--border-color);
     color: var(--text-primary);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(45, 41, 36, 0.08);
     border-color: var(--text-secondary);
     box-shadow: none;
     transform: translateY(-2px);
@@ -276,8 +276,8 @@ h2::after {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    background: #0b0f19;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #efebe0;
+    border: 1px solid var(--border-color);
 }
 
 #simulation-canvas {
@@ -287,7 +287,7 @@ h2::after {
 }
 
 .sim-controls-panel {
-    background: rgba(9, 13, 22, 0.6);
+    background: rgba(250, 248, 245, 0.85);
     border-radius: 12px;
     padding: 1.5rem;
     border: 1px solid var(--border-color);
@@ -384,7 +384,7 @@ h2::after {
 
 .cv-duration {
     font-size: 0.85rem;
-    background: rgba(59, 130, 246, 0.1);
+    background: rgba(194, 89, 63, 0.1);
     color: var(--accent-solid);
     padding: 0.2rem 0.6rem;
     border-radius: 50px;
@@ -411,7 +411,7 @@ h2::after {
 }
 
 .skill-tag {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(45, 41, 36, 0.02);
     border: 1px solid var(--border-color);
     padding: 0.4rem 1rem;
     border-radius: 8px;
@@ -421,8 +421,8 @@ h2::after {
 }
 
 .skill-tag:hover {
-    border-color: rgba(59, 130, 246, 0.5);
-    background: rgba(59, 130, 246, 0.05);
+    border-color: rgba(194, 89, 63, 0.4);
+    background: rgba(194, 89, 63, 0.05);
 }
 
 /* Publications */
@@ -443,7 +443,7 @@ h2::after {
 }
 
 .pub-item:hover {
-    border-color: rgba(59, 130, 246, 0.3);
+    border-color: rgba(194, 89, 63, 0.25);
     transform: translateX(4px);
 }
 
@@ -456,7 +456,7 @@ h2::after {
     font-weight: 700;
     padding: 0.3rem 0.8rem;
     border-bottom-left-radius: 8px;
-    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    background: var(--accent-gradient);
 }
 
 .pub-title {
@@ -515,13 +515,13 @@ h2::after {
 
 .media-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(139, 92, 246, 0.3);
+    border-color: rgba(194, 89, 63, 0.3);
 }
 
 .media-preview {
     width: 100%;
     height: 200px;
-    background: #090d16;
+    background: #efebe0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -573,7 +573,7 @@ h2::after {
 }
 
 .hobby-card {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(45, 41, 36, 0.02);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1.5rem;
@@ -583,12 +583,12 @@ h2::after {
 
 .hobby-card:hover {
     background: var(--bg-card);
-    border-color: rgba(59, 130, 246, 0.25);
+    border-color: rgba(194, 89, 63, 0.25);
     transform: translateY(-2px);
 }
 
 .hobby-icon {
-    background: rgba(59, 130, 246, 0.1);
+    background: rgba(194, 89, 63, 0.1);
     color: var(--accent-solid);
     width: 48px;
     height: 48px;
@@ -614,7 +614,7 @@ h2::after {
 
 /* Contact / Footer */
 footer {
-    background: #07090f;
+    background: #1d1a17;
     border-top: 1px solid var(--border-color);
     padding: 4rem 0 2rem 0;
     text-align: center;
@@ -647,7 +647,7 @@ footer {
     background: var(--accent-solid);
     border-color: var(--accent-solid);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 5px 15px rgba(194, 89, 63, 0.3);
 }
 
 .footer-text {
@@ -680,7 +680,7 @@ footer {
 /* Collapsible Publication Details */
 .pub-details {
     margin-top: 1.25rem;
-    background: rgba(9, 13, 22, 0.4);
+    background: rgba(230, 223, 211, 0.35);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 0.75rem 1rem;
@@ -688,8 +688,8 @@ footer {
 }
 
 .pub-details[open] {
-    border-color: rgba(59, 130, 246, 0.3);
-    background: rgba(9, 13, 22, 0.6);
+    border-color: rgba(194, 89, 63, 0.25);
+    background: rgba(230, 223, 211, 0.5);
 }
 
 .pub-details summary {
@@ -786,8 +786,8 @@ footer {
 
 .research-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(59, 130, 246, 0.4);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(59, 130, 246, 0.1);
+    border-color: rgba(194, 89, 63, 0.35);
+    box-shadow: 0 12px 30px rgba(45, 41, 36, 0.06), 0 0 20px rgba(194, 89, 63, 0.05);
 }
 
 .research-card::before {
@@ -816,9 +816,9 @@ footer {
     text-transform: uppercase;
     padding: 0.25rem 0.75rem;
     border-radius: 50px;
-    background: rgba(59, 130, 246, 0.1);
+    background: rgba(194, 89, 63, 0.1);
     color: var(--accent-solid);
-    border: 1px solid rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(194, 89, 63, 0.2);
 }
 
 .research-card h3 {
@@ -855,7 +855,7 @@ footer {
 
 .research-badge {
     font-size: 0.8rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(45, 41, 36, 0.02);
     border: 1px solid var(--border-color);
     padding: 0.25rem 0.6rem;
     border-radius: 6px;
@@ -864,7 +864,7 @@ footer {
 }
 
 .research-card:hover .research-badge {
-    border-color: rgba(59, 130, 246, 0.2);
+    border-color: rgba(194, 89, 63, 0.2);
     color: var(--text-secondary);
 }
 

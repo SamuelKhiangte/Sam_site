@@ -45,7 +45,7 @@ class ActiveMatterSim {
                 vx: (Math.random() - 0.5) * this.params.particleSpeed * 2,
                 vy: (Math.random() - 0.5) * this.params.particleSpeed * 2,
                 radius: 4,
-                color: `hsla(${200 + Math.random() * 60}, 85%, 65%, 0.8)`
+                color: `hsla(${12 + Math.random() * 26}, 75%, 55%, 0.8)`
             });
         }
 
@@ -276,7 +276,7 @@ class ActiveMatterSim {
 
     draw() {
         // Semi-transparent clearing for motion blur trails
-        this.ctx.fillStyle = 'rgba(11, 15, 25, 0.25)';
+        this.ctx.fillStyle = 'rgba(239, 235, 224, 0.25)';
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
         // Draw connections (bonds) between close cells first (underneath them)
@@ -289,7 +289,7 @@ class ActiveMatterSim {
                 const dist = Math.hypot(other.x - agent.x, other.y - agent.y);
                 if (dist < p.adhesionRadius) {
                     const alpha = (1 - dist / p.adhesionRadius) * 0.45;
-                    this.ctx.strokeStyle = `rgba(139, 92, 246, ${alpha})`; // Indigo bond
+                    this.ctx.strokeStyle = `rgba(194, 89, 63, ${alpha})`; // Terracotta bond
                     this.ctx.beginPath();
                     this.ctx.moveTo(agent.x, agent.y);
                     this.ctx.lineTo(other.x, other.y);
@@ -303,16 +303,16 @@ class ActiveMatterSim {
             // Draw subtle glowing drop shadow for obstacles
             this.ctx.beginPath();
             this.ctx.arc(o.x, o.y, o.radius, 0, Math.PI * 2);
-            this.ctx.fillStyle = o.isUserPlaced ? 'rgba(239, 68, 68, 0.15)' : 'rgba(59, 130, 246, 0.1)';
+            this.ctx.fillStyle = o.isUserPlaced ? 'rgba(194, 89, 63, 0.15)' : 'rgba(107, 98, 87, 0.12)';
             this.ctx.fill();
             this.ctx.lineWidth = 2;
-            this.ctx.strokeStyle = o.isUserPlaced ? 'rgba(239, 68, 68, 0.5)' : 'rgba(59, 130, 246, 0.4)';
+            this.ctx.strokeStyle = o.isUserPlaced ? 'rgba(194, 89, 63, 0.5)' : 'rgba(107, 98, 87, 0.4)';
             this.ctx.stroke();
 
             // Core of obstacle
             this.ctx.beginPath();
             this.ctx.arc(o.x, o.y, o.radius * 0.7, 0, Math.PI * 2);
-            this.ctx.fillStyle = o.isUserPlaced ? 'rgba(239, 68, 68, 0.25)' : 'rgba(30, 41, 59, 0.8)';
+            this.ctx.fillStyle = o.isUserPlaced ? 'rgba(194, 89, 63, 0.25)' : 'rgba(107, 98, 87, 0.85)';
             this.ctx.fill();
         });
 

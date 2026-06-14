@@ -163,6 +163,38 @@
             </p>
             <div class="research-container">
 
+                <!-- Project: Video Presentation of Research -->
+                <div class="research-card" style="border-color: rgba(194, 89, 63, 0.3); background: linear-gradient(180deg, var(--bg-card) 0%, rgba(194, 89, 63, 0.03) 100%);">
+                    <div class="research-card-header">
+                        <h3>Research Presentation: Machine Learning & Biophysics</h3>
+                        <span class="research-card-tag" style="background: rgba(194, 89, 63, 0.1); color: var(--accent-solid); border-color: rgba(194, 89, 63, 0.2);">Video Presentation</span>
+                    </div>
+                    <div class="research-card-content">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; align-items: center;">
+                            <div>
+                                <p>
+                                    A video overview of my research, discussing how we combine deep learning (GNNs, CNNs) and physics-based models (active matter, phase fields) to analyze complex cellular systems, active matter collectives, and fluid turbulence.
+                                </p>
+                                <p style="margin-bottom: 1.5rem;">
+                                    This presentation walks through key methodologies, experimental validations at the Indian Institute of Science (IISc), and real-world implications for clinical diagnostics and fluid dynamics.
+                                </p>
+                                <div>
+                                    <a href="https://www.youtube.com/watch?v=_g3hDu3ad7Q&t=3s" class="btn" target="_blank" style="text-decoration: none;">
+                                        <svg class="icon" viewBox="0 0 24 24" style="margin-right: 0.25rem;">
+                                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" fill="currentColor"/>
+                                            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#2d2924"/>
+                                        </svg>
+                                        Watch on YouTube
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-preview-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+                                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" src="https://www.youtube.com/embed/_g3hDu3ad7Q?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Project 1: Actin Waves Paper -->
                 <div class="research-card">
                     <div class="research-card-header">
@@ -170,17 +202,25 @@
                         <span class="research-card-tag">Published • EMBO Reports</span>
                     </div>
                     <div class="research-card-content">
-                        <p>
-                            We investigate the complex cytoskeletal mechanics of the <strong>immunological synapse</strong>—the contact junction between a T cell and an antigen-presenting cell (APC) that initiates the adaptive immune response.
-                        </p>
-                        <p>
-                            Using high-resolution <strong>Total Internal Reflection-Structured Illumination Microscopy (TIRF-SIM)</strong> combined with quantitative tracking, we discovered that roughly 40% of motile T Cell Receptor (TCR) microclusters move anterogradely (outward) toward the cell boundary, driven by outward-propagating <strong>actin waves</strong>. This outward movement, mediated by the <strong>Wiskott-Aldrich Syndrome Protein (WASP)</strong> acting as a molecular tether, allows the cell to escape degradation pathways at the synapse center, maintaining receptor homeostasis and prolonging signaling viability.
-                        </p>
-                        <div class="research-badge-grid">
-                            <span class="research-badge">TIRF-SIM</span>
-                            <span class="research-badge">Cytoskeletal Mechanics</span>
-                            <span class="research-badge">Primary T Cells</span>
-                            <span class="research-badge">WASP Pathway</span>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; align-items: start;">
+                            <div>
+                                <p>
+                                    We investigate the complex cytoskeletal mechanics of the <strong>immunological synapse</strong>—the contact junction between a T cell and an antigen-presenting cell (APC) that initiates the adaptive immune response.
+                                </p>
+                                <p>
+                                    Using high-resolution <strong>Total Internal Reflection-Structured Illumination Microscopy (TIRF-SIM)</strong> combined with quantitative tracking, we discovered that roughly 40% of motile T Cell Receptor (TCR) microclusters move anterogradely (outward) toward the cell boundary, driven by outward-propagating <strong>actin waves</strong>. This outward movement, mediated by the <strong>Wiskott-Aldrich Syndrome Protein (WASP)</strong> acting as a molecular tether, allows the cell to escape degradation pathways at the synapse center, maintaining receptor homeostasis and prolonging signaling viability.
+                                </p>
+                                <div class="research-badge-grid">
+                                    <span class="research-badge">TIRF-SIM</span>
+                                    <span class="research-badge">Cytoskeletal Mechanics</span>
+                                    <span class="research-badge">Primary T Cells</span>
+                                    <span class="research-badge">WASP Pathway</span>
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem; justify-content: center; align-items: center;">
+                                <img src="./primary_waves.gif" alt="Actin Waves Simulation/Microscopy" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+                                <span style="font-size: 0.8rem; color: var(--text-muted); text-align: center;">Figure: Running TIRF-SIM visualization of propagating actin waves in primary T cells.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -214,20 +254,28 @@
                         <span class="research-card-tag">Active Project</span>
                     </div>
                     <div class="research-card-content">
-                        <p>
-                            <strong>Topological defects in actin:</strong> In active liquid crystal systems like the actin cytoskeleton, topological defects are singularities or disruptions in the ordered alignment of the filaments (most commonly +1/2 comets and -1/2 trefoils). These defects are biological hotspots because they concentrate high mechanical stresses, directing cell flow patterns, tissue division, and morphogenesis.
-                        </p>
-                        <p>
-                            <strong>Graph Neural Networks (GNNs):</strong> GNNs are deep learning architectures designed to perform computation directly on graph-structured data. By representing defects as nodes and spatial relationships/interactions as edges, GNNs utilize message-passing layers to propagate and aggregate relational state information across neighbors.
-                        </p>
-                        <p>
-                            <strong>Learning interaction forces:</strong> We employ JAX-based GNNs to model the trajectories and multi-body dynamics of defects. By training the neural network on trajectory data, the GNN directly learns the underlying, non-local interaction force and torque fields between defects without requiring hand-crafted hydrodynamic equations, providing a purely data-driven path to active matter field theories.
-                        </p>
-                        <div class="research-badge-grid">
-                            <span class="research-badge">Graph Neural Networks</span>
-                            <span class="research-badge">JAX / Flax</span>
-                            <span class="research-badge">Topological Defects</span>
-                            <span class="research-badge">Active Liquid Crystals</span>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; align-items: start;">
+                            <div>
+                                <p>
+                                    <strong>Topological defects in actin:</strong> In active liquid crystal systems like the actin cytoskeleton, topological defects are singularities or disruptions in the ordered alignment of the filaments (most commonly +1/2 comets and -1/2 trefoils). These defects are biological hotspots because they concentrate high mechanical stresses, directing cell flow patterns, tissue division, and morphogenesis.
+                                </p>
+                                <p>
+                                    <strong>Graph Neural Networks (GNNs):</strong> GNNs are deep learning architectures designed to perform computation directly on graph-structured data. By representing defects as nodes and spatial relationships/interactions as edges, GNNs utilize message-passing layers to propagate and aggregate relational state information across neighbors.
+                                </p>
+                                <p>
+                                    <strong>Learning interaction forces:</strong> We employ JAX-based GNNs to model the trajectories and multi-body dynamics of defects. By training the neural network on trajectory data, the GNN directly learns the underlying, non-local interaction force and torque fields between defects without requiring hand-crafted hydrodynamic equations, providing a purely data-driven path to active matter field theories.
+                                </p>
+                                <div class="research-badge-grid">
+                                    <span class="research-badge">Graph Neural Networks</span>
+                                    <span class="research-badge">JAX / Flax</span>
+                                    <span class="research-badge">Topological Defects</span>
+                                    <span class="research-badge">Active Liquid Crystals</span>
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem; justify-content: center; align-items: center;">
+                                <img src="./seed_46%201.gif" alt="Topological Defect Interactions using GNN" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+                                <span style="font-size: 0.8rem; color: var(--text-muted); text-align: center;">Figure: GNN predictions of defect dynamics and interaction trajectories (Seed 46).</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -239,20 +287,28 @@
                         <span class="research-card-tag">Active Project</span>
                     </div>
                     <div class="research-card-content">
-                        <p>
-                            <strong>Epithelial Cells:</strong> Epithelial cells form cohesive, tightly packed layers (epithelia) that line the surfaces of organs, cavities, and blood vessels. They act as protective barriers and active physical interfaces.
-                        </p>
-                        <p>
-                            <strong>Why they are interesting:</strong> Epithelial layers exhibit complex collective mechanics, showing liquid-like flows, solid-like jamming transitions, collective wound healing, and epithelial-to-mesenchymal transitions (EMT) key to cancer metastasis.
-                        </p>
-                        <p>
-                            To model their highly deformable shapes, division, and stress propagation, we implement a <strong>phase field model</strong>. Rather than explicitly tracking discrete cell boundaries, the phase field model represents each cell using a continuous field variable that varies smoothly from 1 (inside the cell) to 0 (outside). This diffuse-interface formulation naturally handles complex topological transitions like cell division, collision, and large-scale deformation.
-                        </p>
-                        <div class="research-badge-grid">
-                            <span class="research-badge">Phase Field Modeling</span>
-                            <span class="research-badge">Collective Cell Migration</span>
-                            <span class="research-badge">Biophysics</span>
-                            <span class="research-badge">Tissue Dynamics</span>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; align-items: start;">
+                            <div>
+                                <p>
+                                    <strong>Epithelial Cells:</strong> Epithelial cells form cohesive, tightly packed layers (epithelia) that line the surfaces of organs, cavities, and blood vessels. They act as protective barriers and active physical interfaces.
+                                </p>
+                                <p>
+                                    <strong>Why they are interesting:</strong> Epithelial layers exhibit complex collective mechanics, showing liquid-like flows, solid-like jamming transitions, collective wound healing, and epithelial-to-mesenchymal transitions (EMT) key to cancer metastasis.
+                                </p>
+                                <p>
+                                    To model their highly deformable shapes, division, and stress propagation, we implement a <strong>phase field model</strong>. Rather than explicitly tracking discrete cell boundaries, the phase field model represents each cell using a continuous field variable that varies smoothly from 1 (inside the cell) to 0 (outside). This diffuse-interface formulation naturally handles complex topological transitions like cell division, collision, and large-scale deformation.
+                                </p>
+                                <div class="research-badge-grid">
+                                    <span class="research-badge">Phase Field Modeling</span>
+                                    <span class="research-badge">Collective Cell Migration</span>
+                                    <span class="research-badge">Biophysics</span>
+                                    <span class="research-badge">Tissue Dynamics</span>
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem; justify-content: center; align-items: center;">
+                                <img src="./epithelia.gif" alt="Epithelial Cell Phase Field Simulation" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+                                <span style="font-size: 0.8rem; color: var(--text-muted); text-align: center;">Figure: Phase field simulation showing deformable epithelial cells.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
