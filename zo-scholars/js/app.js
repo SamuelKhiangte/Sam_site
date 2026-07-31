@@ -15,6 +15,7 @@
 
   var STORAGE_KEY = 'zo-scholars-mailing-list';
   var FIELDS = ['name', 'email', 'institute', 'subject', 'designation'];
+  var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyqfArf2ZjBkPh_t5xD9Sa50vzMtA-Vtzs23_SQ9Vbzb_zxZ8y5QMA4pwzA2m3mCPaHNw/exec'; // Paste your Google Apps Script Web App URL here
 
   var serverMode = false;
 
@@ -98,14 +99,14 @@
   function loadMembers() {
     var local = readLocal();
 
-    var endpoint = serverMode ? 'api/members' : 'data/members.json';
+    var endpoint = serverMode ? 'api/members' : (GOOGLE_SCRIPT_URL || 'data/members.json');
 
     return fetch(endpoint, { cache: 'no-store' })
       .then(function (r) { return r.ok ? r.json() : []; })
       .catch(function () { return []; })
       .then(function (published) {
         if (!Array.isArray(published)) published = [];
-        if (serverMode) return published;
+        if (serverMode || GOOGLE_SCRIPT_URL) return published;
 
         var seen = {};
         published.forEach(function (m) {
@@ -200,6 +201,32 @@
         return;
       }
 
+      if (GOOGLE_SCRIPT_URL) {
+        fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(record)
+        })
+          .then(function (r) {
+            if (!r.ok) throw new Error('server rejected the registration');
+            return r.json();
+          })
+          .then(function (data) {
+            if (data && data.error) {
+              done(data.error, 'err');
+              return;
+            }
+            form.reset();
+            done('Thank you — you have been added to the mailing list.', 'ok');
+            loadMembers();
+          })
+          .catch(function () {
+            done('Could not reach the server. Please try again.', 'err');
+          });
+        return;
+      }
+
       var list = readLocal();
       var duplicate = list.some(function (m) {
         return text(m.email).toLowerCase() === record.email.toLowerCase();
@@ -229,37 +256,13 @@
     var button = document.getElementById('export-btn');
     if (!button) return;
 
+    if (!serverMode) {
+      button.style.display = 'none';
+      return;
+    }
+
     button.addEventListener('click', function () {
-      if (serverMode) {
-        window.location.href = 'api/export';
-        return;
-      }
-
-      var list = readLocal();
-      if (!list.length) {
-        setMessage(document.getElementById('export-msg'),
-          'There is nothing saved in this browser yet.', 'err');
-        return;
-      }
-
-      var blob = ZoXlsx.build({
-        sheetName: 'Mailing List',
-        columns: [
-          { header: 'Name', width: 24 },
-          { header: 'Email', width: 30 },
-          { header: 'Institute', width: 34 },
-          { header: 'Subject', width: 26 },
-          { header: 'Designation', width: 24 },
-          { header: 'Registered', width: 20 }
-        ],
-        rows: list.map(function (m) {
-          return [m.name, m.email, m.institute, m.subject, m.designation, m.registered];
-        })
-      });
-
-      ZoXlsx.download(blob, 'zo-scholars-mailing-list.xlsx');
-      setMessage(document.getElementById('export-msg'),
-        'Downloaded ' + list.length + ' ' + (list.length === 1 ? 'entry' : 'entries') + '.', 'ok');
+      window.location.href = 'api/export';
     });
   }
 
