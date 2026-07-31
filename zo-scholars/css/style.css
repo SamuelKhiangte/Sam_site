@@ -400,6 +400,98 @@ tbody tr:hover td { background: var(--blue-050); }
 
 .site-footer a { color: var(--blue-700); }
 
+/* ---------- organisers ---------- */
+.organizers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.organizer-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.organizer-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--blue-100);
+  margin-bottom: 18px;
+  background: var(--blue-050);
+}
+
+.organizer-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  border: 3px solid var(--blue-100);
+}
+
+.organizer-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--blue-900);
+  margin: 0 0 6px 0;
+}
+
+.organizer-title {
+  font-size: 0.88rem;
+  color: var(--blue-700);
+  font-weight: 500;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+}
+
+.organizer-interests {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin: 0;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  width: 100%;
+}
+
+.organizer-interests strong {
+  color: var(--blue-900);
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.organizer-contact {
+  color: var(--blue-500);
+  text-decoration: none;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.organizer-contact:hover {
+  text-decoration: underline;
+  color: var(--blue-700);
+}
+
 @media (max-width: 640px) {
   body { font-size: 16px; }
   .hero { padding: 56px 0 48px; }
