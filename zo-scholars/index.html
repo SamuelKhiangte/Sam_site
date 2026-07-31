@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zo Scholars Journal Club</title>
+<meta name="description" content="A meeting place for Mizo STEM research scholars to share and discuss their research.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="dot"></span>Zo Scholars Journal Club</a>
+    <nav class="site-nav">
+      <a href="#introduction">Introduction</a>
+      <a href="events.html">Upcoming events</a>
+      <a href="#join">Join</a>
+      <a href="#members">Members</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Zo Scholars Journal Club</h1>
+    <p class="mission">
+      <span class="mission-label">Our mission</span>
+      <span lang="lus">Mizo STEM research sholars te kan inpawlhona leh kan research kan in hrilhhriatna hmun</span>
+    </p>
+  </div>
+</div>
+
+<main>
+
+  <!-- ======================================================================
+       INTRODUCTION — write your introduction inside the <div class="intro-body">
+       below. Each paragraph goes between its own <p> and </p> tags.
+       ====================================================================== -->
+  <section id="introduction">
+    <div class="wrap">
+      <h2>Introduction</h2>
+      <p class="section-note">About the club — who we are and what we do.</p>
+      <div class="card">
+        <div class="intro-body">
+
+          <p>Write your introduction here. Say who started the club, why it exists, and what a typical session looks like.</p>
+
+          <p>Add a second paragraph about who is welcome to join, how often you meet, and how papers are chosen for discussion.</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="events">
+    <div class="wrap">
+      <h2>Upcoming events</h2>
+      <p class="section-note">Sessions, paper discussions and talks coming up.</p>
+      <div class="events-teaser">
+        <div>
+          <h3>See what is coming up next</h3>
+          <p>The full schedule of upcoming and past sessions.</p>
+        </div>
+        <a class="btn" href="events.html">View upcoming events</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="join">
+    <div class="wrap">
+      <h2>Join the mailing list</h2>
+      <p class="section-note">Get session announcements and reading material by email.</p>
+
+      <div class="card">
+        <form id="join-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name">
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+            </div>
+            <div class="field full">
+              <label for="institute">Institute / organisation</label>
+              <input id="institute" name="institute" type="text" autocomplete="organization" placeholder="e.g. Mizoram University">
+            </div>
+            <div class="field">
+              <label for="subject">Subject / field</label>
+              <input id="subject" name="subject" type="text" list="subject-options" placeholder="e.g. Molecular Biology">
+              <datalist id="subject-options">
+                <option value="Physics"></option>
+                <option value="Chemistry"></option>
+                <option value="Mathematics"></option>
+                <option value="Biology"></option>
+                <option value="Biotechnology"></option>
+                <option value="Computer Science"></option>
+                <option value="Engineering"></option>
+                <option value="Medicine"></option>
+                <option value="Environmental Science"></option>
+                <option value="Agriculture"></option>
+              </datalist>
+            </div>
+            <div class="field">
+              <label for="designation">Designation</label>
+              <input id="designation" name="designation" type="text" list="designation-options" placeholder="e.g. PhD Student">
+              <datalist id="designation-options">
+                <option value="BSc Student"></option>
+                <option value="MSc Student"></option>
+                <option value="PhD Student"></option>
+                <option value="Research Scholar"></option>
+                <option value="Postdoctoral Researcher"></option>
+                <option value="Scientist"></option>
+                <option value="Assistant Professor"></option>
+                <option value="Associate Professor"></option>
+                <option value="Professor"></option>
+              </datalist>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">Register</button>
+            <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <p class="privacy" id="storage-note">
+          Your institute, subject and designation appear in the members list below.
+          Your name and email address are never shown on the site.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="members">
+    <div class="wrap">
+      <h2>Our members</h2>
+      <p class="section-note">The institutes, subjects and designations represented in the club.</p>
+
+      <div class="tally" id="members-tally"></div>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Institute</th>
+              <th scope="col">Subject</th>
+              <th scope="col">Designation</th>
+            </tr>
+          </thead>
+          <tbody id="members-body"></tbody>
+        </table>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-quiet" id="export-btn" type="button">Download mailing list (Excel)</button>
+        <p class="form-msg" id="export-msg" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Zo Scholars Journal Club</span>
+    <span><a href="events.html">Upcoming events</a> · <a href="#join">Join the mailing list</a></span>
+  </div>
+</footer>
+
+<script src="js/xlsx.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

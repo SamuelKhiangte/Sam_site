@@ -1,0 +1,8 @@
+# Registration data holds names and email addresses — never commit it to a
+# public repository. data/members.json (institute / subject / designation only)
+# IS committed, because that is what the live site displays.
+registrations.xlsx
+data/registrations.json
+*.tmp
+.DS_Store
+__pycache__/
