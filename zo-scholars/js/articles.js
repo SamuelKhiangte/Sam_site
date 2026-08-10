@@ -41,7 +41,16 @@
     var title = document.createElement('h3');
     title.style.fontSize = '1.25rem';
     title.style.marginBottom = '6px';
-    title.textContent = item.title || 'Untitled';
+    if (item.videoUrl) {
+      var titleLink = document.createElement('a');
+      titleLink.href = item.videoUrl;
+      titleLink.target = '_blank';
+      titleLink.rel = 'noopener noreferrer';
+      titleLink.textContent = item.title || 'Untitled';
+      title.appendChild(titleLink);
+    } else {
+      title.textContent = item.title || 'Untitled';
+    }
     body.appendChild(title);
 
     if (item.author) {
@@ -49,6 +58,38 @@
       author.className = 'meta';
       author.textContent = 'By ' + item.author;
       body.appendChild(author);
+    }
+
+    if (item.videoUrl) {
+      var videoLink = document.createElement('a');
+      videoLink.href = item.videoUrl;
+      videoLink.target = '_blank';
+      videoLink.rel = 'noopener noreferrer';
+      videoLink.className = 'video-preview';
+      
+      var videoId = '';
+      if (item.videoUrl.indexOf('youtu.be/') > -1) {
+        videoId = item.videoUrl.split('youtu.be/')[1].split(/[?#]/)[0];
+      } else if (item.videoUrl.indexOf('v=') > -1) {
+        videoId = item.videoUrl.split('v=')[1].split('&')[0];
+      }
+      
+      if (videoId) {
+        var img = document.createElement('img');
+        img.src = 'https://img.youtube.com/vi/' + videoId + '/maxresdefault.jpg';
+        img.onerror = function() {
+          this.onerror = null;
+          this.src = 'https://img.youtube.com/vi/' + videoId + '/hqdefault.jpg';
+        };
+        img.alt = item.title || 'Video Thumbnail';
+        videoLink.appendChild(img);
+        
+        var playBtn = document.createElement('div');
+        playBtn.className = 'video-play-btn';
+        videoLink.appendChild(playBtn);
+        
+        body.appendChild(videoLink);
+      }
     }
 
     if (Array.isArray(item.content)) {

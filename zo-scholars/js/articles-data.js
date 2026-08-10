@@ -12,6 +12,19 @@
 
 const ZO_ARTICLES = [
   {
+    date: "2026-08-11",
+    label: "Video",
+    title: "Machine Learning Biophysics a hmanna (Alpha Fold )",
+    videoUrl: "https://youtu.be/cCBi4ZueOrw"
+  },
+  {
+    date: "2026-08-10",
+    label: "Video",
+    title: "General Relativity tutorial Mizo tawngin",
+    author: "R. Lallawmsanga (B.S physics IISc)",
+    videoUrl: "https://www.youtube.com/watch?v=4aN9b0CvtMM&t=4s"
+  },
+  {
     date: "2026-08-03",
     label: "Sharing",
     title: "H-Index hi a pawimawh ber em?",
