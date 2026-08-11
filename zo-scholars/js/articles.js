@@ -41,16 +41,21 @@
     var title = document.createElement('h3');
     title.style.fontSize = '1.25rem';
     title.style.marginBottom = '6px';
-    if (item.videoUrl) {
-      var titleLink = document.createElement('a');
+    
+    var titleLink = document.createElement('a');
+    if (item.pdfUrl) {
+      titleLink.href = item.pdfUrl;
+      titleLink.target = '_blank';
+      titleLink.rel = 'noopener noreferrer';
+    } else if (item.videoUrl) {
       titleLink.href = item.videoUrl;
       titleLink.target = '_blank';
       titleLink.rel = 'noopener noreferrer';
-      titleLink.textContent = item.title || 'Untitled';
-      title.appendChild(titleLink);
-    } else {
-      title.textContent = item.title || 'Untitled';
+    } else if (item.id) {
+      titleLink.href = 'article.html?id=' + encodeURIComponent(item.id);
     }
+    titleLink.textContent = item.title || 'Untitled';
+    title.appendChild(titleLink);
     body.appendChild(title);
 
     if (item.author) {
@@ -92,14 +97,49 @@
       }
     }
 
-    if (Array.isArray(item.content)) {
-      item.content.forEach(function (para) {
+    if (Array.isArray(item.content) && item.content.length > 0) {
+      if (item.pdfUrl) {
+        // Show intro text for PDF articles
+        item.content.forEach(function (para) {
+          var p = document.createElement('p');
+          p.className = 'desc';
+          p.style.marginBottom = '1.2em';
+          p.innerHTML = para;
+          body.appendChild(p);
+        });
+        
+        var pdfBtn = document.createElement('a');
+        pdfBtn.className = 'btn btn-quiet';
+        pdfBtn.style.marginTop = '8px';
+        pdfBtn.style.display = 'inline-flex';
+        pdfBtn.style.alignItems = 'center';
+        pdfBtn.style.gap = '6px';
+        pdfBtn.href = item.pdfUrl;
+        pdfBtn.target = '_blank';
+        pdfBtn.rel = 'noopener noreferrer';
+        pdfBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg> Read PDF online (new tab)';
+        body.appendChild(pdfBtn);
+      } else {
+        // Show 1st paragraph / intro snippet for text articles
+        var firstPara = item.content[0];
         var p = document.createElement('p');
         p.className = 'desc';
         p.style.marginBottom = '1.2em';
-        p.innerHTML = para;
+        p.innerHTML = firstPara;
         body.appendChild(p);
-      });
+
+        if (item.id) {
+          var readBtn = document.createElement('a');
+          readBtn.className = 'btn btn-quiet';
+          readBtn.style.marginTop = '4px';
+          readBtn.style.display = 'inline-flex';
+          readBtn.style.alignItems = 'center';
+          readBtn.style.gap = '6px';
+          readBtn.href = 'article.html?id=' + encodeURIComponent(item.id);
+          readBtn.innerHTML = 'Read full article &rarr;';
+          body.appendChild(readBtn);
+        }
+      }
     }
 
     article.appendChild(side);

@@ -12,12 +12,25 @@
 
 const ZO_ARTICLES = [
   {
+    id: "entropy",
+    date: "2026-08-11",
+    label: "Article",
+    title: "Entropy bih chianna",
+    author: "Lalhminghlui (PhD Mechanical Engineering, Indian Institute of Science)",
+    pdfUrl: "ENTROPY.pdf",
+    content: [
+      "Entropy hi eng tak nge a nih? class 11 science a kan entropy zir kha kan zawi fiah anga, a concept thuk zia leh a mathematics kimchangin ngaihtuah ho ila ..."
+    ]
+  },
+  {
+    id: "ml-biophysics",
     date: "2026-08-11",
     label: "Video",
     title: "Machine Learning Biophysics a hmanna (Alpha Fold )",
     videoUrl: "https://youtu.be/cCBi4ZueOrw"
   },
   {
+    id: "general-relativity",
     date: "2026-08-10",
     label: "Video",
     title: "General Relativity tutorial Mizo tawngin",
@@ -25,6 +38,7 @@ const ZO_ARTICLES = [
     videoUrl: "https://www.youtube.com/watch?v=4aN9b0CvtMM&t=4s"
   },
   {
+    id: "h-index",
     date: "2026-08-03",
     label: "Sharing",
     title: "H-Index hi a pawimawh ber em?",
