@@ -27,6 +27,7 @@ const ZO_ARTICLES = [
     date: "2026-08-11",
     label: "Video",
     title: "Machine Learning Biophysics a hmanna (Alpha Fold )",
+    author: "Samuel Z Khiangte",
     videoUrl: "https://youtu.be/cCBi4ZueOrw"
   },
   {
