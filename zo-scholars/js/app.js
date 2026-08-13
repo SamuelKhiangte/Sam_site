@@ -14,7 +14,7 @@
   'use strict';
 
   var STORAGE_KEY = 'zo-scholars-mailing-list';
-  var FIELDS = ['name', 'email', 'institute', 'subject', 'designation'];
+  var FIELDS = ['name', 'email', 'institute', 'subject', 'designation', 'research_topic'];
   var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyqfArf2ZjBkPh_t5xD9Sa50vzMtA-Vtzs23_SQ9Vbzb_zxZ8y5QMA4pwzA2m3mCPaHNw/exec'; // Paste your Google Apps Script Web App URL here
 
   var serverMode = false;
@@ -57,14 +57,14 @@
       var tr = document.createElement('tr');
       tr.className = 'empty-row';
       var td = document.createElement('td');
-      td.colSpan = 3;
+      td.colSpan = 4;
       td.textContent = 'No one has joined yet — be the first to sign up above.';
       tr.appendChild(td);
       tbody.appendChild(tr);
     } else {
       list.forEach(function (m) {
         var tr = document.createElement('tr');
-        [m.institute, m.subject, m.designation].forEach(function (value) {
+        [m.institute, m.subject, m.designation, m.research_topic].forEach(function (value) {
           var td = document.createElement('td');
           td.textContent = text(value) || '—';
           tr.appendChild(td);
@@ -110,10 +110,10 @@
 
         var seen = {};
         published.forEach(function (m) {
-          seen[(text(m.institute) + '|' + text(m.subject) + '|' + text(m.designation)).toLowerCase()] = 1;
+          seen[(text(m.institute) + '|' + text(m.subject) + '|' + text(m.designation) + '|' + text(m.research_topic)).toLowerCase()] = 1;
         });
         local.forEach(function (m) {
-          var key = (text(m.institute) + '|' + text(m.subject) + '|' + text(m.designation)).toLowerCase();
+          var key = (text(m.institute) + '|' + text(m.subject) + '|' + text(m.designation) + '|' + text(m.research_topic)).toLowerCase();
           if (!seen[key]) {
             seen[key] = 1;
             published.push(m);

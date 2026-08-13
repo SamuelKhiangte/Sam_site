@@ -39,10 +39,11 @@ COLUMNS = [
     ("Institute", "institute", 34),
     ("Subject", "subject", 26),
     ("Designation", "designation", 24),
+    ("Research Topic", "research_topic", 36),
     ("Registered", "registered", 20),
 ]
 
-PUBLIC_FIELDS = ("institute", "subject", "designation")
+PUBLIC_FIELDS = ("institute", "subject", "designation", "research_topic")
 
 
 # --------------------------------------------------------------------------- #
@@ -235,7 +236,7 @@ class Handler(SimpleHTTPRequestHandler):
 
         clean = {key: str(record.get(key, "")).strip() for _, key, _ in COLUMNS}
 
-        missing = [k for k in ("name", "email", "institute", "subject", "designation")
+        missing = [k for k in ("name", "email", "institute", "subject", "designation", "research_topic")
                    if not clean[k]]
         if missing:
             return self.send_json({"error": "missing: " + ", ".join(missing)}, 400)

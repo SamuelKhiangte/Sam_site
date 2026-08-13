@@ -172,6 +172,10 @@
                 <option value="Professor"></option>
               </datalist>
             </div>
+            <div class="field full">
+              <label for="research_topic">Research area & topic</label>
+              <input id="research_topic" name="research_topic" type="text" placeholder="e.g. Active Matter Physics, Nanoscale Heat Transport, MOFs">
+            </div>
           </div>
 
           <div class="form-actions">
@@ -181,7 +185,7 @@
         </form>
 
         <p class="privacy" id="storage-note">
-          Your institute, subject and designation appear in the members list below.
+          Your institute, subject, designation and research topic appear in the members list below.
           Your name and email address are never shown on the site.
         </p>
       </div>
@@ -191,7 +195,7 @@
   <section id="members">
     <div class="wrap">
       <h2>Our members</h2>
-      <p class="section-note">The institutes, subjects and designations represented in the club.</p>
+      <p class="section-note">The institutes, subjects, designations and research topics represented in the club.</p>
 
       <div class="tally" id="members-tally"></div>
 
@@ -202,6 +206,7 @@
               <th scope="col">Institute</th>
               <th scope="col">Subject</th>
               <th scope="col">Designation</th>
+              <th scope="col">Research Area & Topic</th>
             </tr>
           </thead>
           <tbody id="members-body"></tbody>
