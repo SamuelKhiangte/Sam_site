@@ -26,13 +26,13 @@ const ZO_EVENTS = [
   },
 
   {
-    date: "2026-08-30",
+    date: "2026-08-23",
     time: "6:00 PM IST",
-    title: "Paper discussion — title of the paper goes here",
-    speaker: "Name of presenter",
-    venue: "Zoom",
+    title: "Research Talk",
+    speaker: "Dr. Krista Roluahpuia (Asst. Professor, IIT Gandhinagar)",
+    venue: "Zoom (link shared by mail)",
     link: "",
-    description: "Replace this block with your real session. Add the paper title, who is presenting, and a two-line summary of what will be covered."
+    description: "Research talk by Dr. Krista Roluahpuia, Assistant Professor at IIT Gandhinagar. Open to everyone on the mailing list."
   }
 
 ];
