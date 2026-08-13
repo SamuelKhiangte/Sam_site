@@ -19,7 +19,7 @@ const ZO_ARTICLES = [
     author: "Lalhminghlui (PhD Mechanical Engineering, Indian Institute of Science)",
     pdfUrl: "ENTROPY.pdf",
     content: [
-      "Entropy hi eng tak nge a nih? class 11 science a kan entropy zir kha kan zawi fiah anga, a concept thuk zia leh a mathematics kimchangin ngaihtuah ho ila ..."
+      "Entropy hi eng tak nge a nih? class 11 science a kan entropy zir kha kan sawi fiah anga, a concept thuk zia leh a mathematics kimchangin ngaihtuah ho ila ..."
     ]
   },
   {
