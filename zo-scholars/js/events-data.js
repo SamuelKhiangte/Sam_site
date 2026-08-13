@@ -26,13 +26,13 @@ const ZO_EVENTS = [
   },
 
   {
-    date: "2026-08-23",
-    time: "6:00 PM IST",
+    date: "",
+    time: "TBD",
     title: "Research Talk",
     speaker: "Dr. Krista Roluahpuia (Asst. Professor, IIT Gandhinagar)",
     venue: "Zoom (link shared by mail)",
     link: "",
-    description: "Research talk by Dr. Krista Roluahpuia, Assistant Professor at IIT Gandhinagar. Open to everyone on the mailing list."
+    description: "Research talk by Dr. Krista Roluahpuia, Assistant Professor at IIT Gandhinagar. Date & time to be announced. Open to everyone on the mailing list."
   }
 
 ];
