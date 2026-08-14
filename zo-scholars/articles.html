@@ -16,6 +16,7 @@
       <a href="index.html#introduction">Introduction</a>
       <a href="events.html">Upcoming events</a>
       <a href="articles.html">Articles</a>
+      <a href="#submit">Submit Article</a>
       <a href="index.html#careers">Careers</a>
       <a href="index.html#join">Join</a>
       <a href="index.html#members">Members</a>
@@ -44,14 +45,89 @@
     </div>
   </section>
 
-  <section>
+  <section id="submit">
     <div class="wrap">
-      <div class="events-teaser">
-        <div>
-          <h3>Want to share your thoughts?</h3>
-          <p>If you have an experience, article, or suggestion to share, join our mailing list or contact the organizers.</p>
-        </div>
-        <a class="btn" href="index.html#join">Join the mailing list</a>
+      <h2>Submit an Article</h2>
+      <p class="section-note">Share your research column, academic insights, tutorial, video talk or experience with the Zo STEM community.</p>
+
+      <div class="card">
+        <form id="article-submission-form" class="article-submission-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="author_name">Author name *</label>
+              <input id="author_name" name="author_name" type="text" autocomplete="name" placeholder="Your full name" required>
+            </div>
+            <div class="field">
+              <label for="author_email">Email address *</label>
+              <input id="author_email" name="author_email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              <span class="field-hint">We'll use this to acknowledge receipt and coordinate publication.</span>
+            </div>
+            <div class="field">
+              <label for="author_institute">Institute / Affiliation</label>
+              <input id="author_institute" name="author_institute" type="text" autocomplete="organization" placeholder="e.g. IISc Bangalore, Mizoram University">
+            </div>
+            <div class="field">
+              <label for="article_category">Submission Type</label>
+              <select id="article_category" name="article_category">
+                <option value="Research Article / Column">Research Article / Column</option>
+                <option value="Academic Experience &amp; Tips">Academic Experience &amp; Tips</option>
+                <option value="Tutorial / Guide">Tutorial / Guide</option>
+                <option value="Video Talk / Presentation">Video Talk / Presentation</option>
+                <option value="Research Opportunity / Announcement">Research Opportunity / Announcement</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="article_title">Article Title *</label>
+              <input id="article_title" name="article_title" type="text" placeholder="e.g. Machine Learning in Structural Biology" required>
+            </div>
+            <div class="field full">
+              <label for="article_summary">Brief Summary / Abstract</label>
+              <textarea id="article_summary" name="article_summary" rows="3" placeholder="A short 2-4 sentence summary of what your article covers..."></textarea>
+            </div>
+            <div class="field full">
+              <label>Upload Document / Article File (PDF, Word, etc.)</label>
+              <div class="file-upload-box">
+                <input id="article_file" name="article_file" type="file" accept=".pdf,.doc,.docx,.ppt,.pptx,.txt,.md">
+                <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <p class="upload-prompt">Click to browse or drag and drop your file here</p>
+                <p class="upload-types">Accepts PDF, DOCX, DOC, PPTX, TXT, MD (Max 25MB)</p>
+              </div>
+              <div class="file-selected-info">
+                <span>Selected: <strong class="file-name-text"></strong></span>
+                <button type="button" class="remove-file-btn">Remove</button>
+              </div>
+            </div>
+            <div class="field full">
+              <label for="article_content">Or Paste Full Article Text (Optional)</label>
+              <textarea id="article_content" name="article_content" rows="6" placeholder="If not uploading a file, you can write or paste your markdown/text article directly here..."></textarea>
+            </div>
+            <div class="field full">
+              <label for="article_link">External Link or YouTube URL (Optional)</label>
+              <input id="article_link" name="article_link" type="url" placeholder="https://youtube.com/watch?v=... or https://arxiv.org/abs/...">
+            </div>
+          </div>
+
+          <div class="submission-notice">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <div>
+              <strong>Editorial Process:</strong> Submissions are delivered directly to the editorial coordinator at <a href="mailto:samuelzkh@gmail.com" style="color:var(--blue-700); font-weight:600;">samuelzkh@gmail.com</a>. After review, it will be uploaded and published to the Zo Scholars Articles library.
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">Submit Article</button>
+            <p class="form-msg submit-msg" role="status" aria-live="polite"></p>
+          </div>
+        </form>
       </div>
     </div>
   </section>
@@ -67,5 +143,6 @@
 
 <script src="js/articles-data.js"></script>
 <script src="js/articles.js"></script>
+<script src="js/submit-article.js"></script>
 </body>
 </html>

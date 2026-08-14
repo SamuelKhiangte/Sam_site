@@ -3,6 +3,8 @@
 # IS committed, because that is what the live site displays.
 registrations.xlsx
 data/registrations.json
+data/submissions.json
+uploads/
 *.tmp
 .DS_Store
 __pycache__/

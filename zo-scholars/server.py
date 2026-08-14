@@ -19,11 +19,13 @@ a real Excel file on disk:
 Only the standard library is used, so there is nothing to install.
 """
 
+import email
 import json
 import os
 import re
 import shutil
 import zipfile
+from email.policy import default
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 from urllib.parse import urlparse
 
@@ -31,6 +33,8 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE, "data")
 REGISTRATIONS_JSON = os.path.join(DATA_DIR, "registrations.json")
 MEMBERS_JSON = os.path.join(DATA_DIR, "members.json")
+SUBMISSIONS_JSON = os.path.join(DATA_DIR, "submissions.json")
+UPLOADS_DIR = os.path.join(BASE, "uploads")
 XLSX_PATH = os.path.join(BASE, "registrations.xlsx")
 
 COLUMNS = [
@@ -222,7 +226,72 @@ class Handler(SimpleHTTPRequestHandler):
         return super().do_GET()
 
     def do_POST(self):
-        if not self.route().endswith("/api/register"):
+        route = self.route()
+
+        if route.endswith("/api/submit-article"):
+            ctype = self.headers.get("Content-Type", "")
+            length = int(self.headers.get("Content-Length") or 0)
+            body = self.rfile.read(length)
+
+            os.makedirs(DATA_DIR, exist_ok=True)
+            os.makedirs(UPLOADS_DIR, exist_ok=True)
+
+            submission = {}
+            saved_files = []
+
+            if "multipart/form-data" in ctype:
+                try:
+                    msg = email.parser.BytesParser(policy=default).parsebytes(
+                        f"Content-Type: {ctype}\r\n\r\n".encode("latin1") + body
+                    )
+                    for part in msg.iter_parts():
+                        disp = part.get("Content-Disposition", "")
+                        if "name=" in disp:
+                            name_match = re.search(r'name="([^"]+)"', disp)
+                            field_name = name_match.group(1) if name_match else ""
+                            filename_match = re.search(r'filename="([^"]+)"', disp)
+                            filename = filename_match.group(1) if filename_match else ""
+
+                            if filename:
+                                safe_name = re.sub(r'[^a-zA-Z0-9_.-]', '_', os.path.basename(filename))
+                                file_path = os.path.join(UPLOADS_DIR, safe_name)
+                                file_bytes = part.get_payload(decode=True)
+                                if file_bytes:
+                                    with open(file_path, "wb") as fh:
+                                        fh.write(file_bytes)
+                                    saved_files.append(safe_name)
+                                    submission[field_name] = safe_name
+                            else:
+                                payload = part.get_payload(decode=True)
+                                submission[field_name] = (payload.decode("utf-8", errors="replace") if payload else "")
+                except Exception as e:
+                    print(f"  ! error parsing multipart: {e}", flush=True)
+            else:
+                try:
+                    submission = json.loads(body.decode("utf-8") or "{}")
+                except Exception:
+                    pass
+
+            submissions = []
+            if os.path.exists(SUBMISSIONS_JSON):
+                try:
+                    with open(SUBMISSIONS_JSON, encoding="utf-8") as fh:
+                        submissions = json.load(fh)
+                        if not isinstance(submissions, list):
+                            submissions = []
+                except Exception:
+                    submissions = []
+
+            submissions.append(submission)
+            _write_json(SUBMISSIONS_JSON, submissions)
+
+            title = submission.get("Article Title") or submission.get("article_title") or "Untitled"
+            author = submission.get("Author Name") or submission.get("author_name") or "Anonymous"
+            print(f"  + article submitted: '{title}' by {author} "
+                  f"({len(saved_files)} file(s) saved in uploads/)", flush=True)
+            return self.send_json({"ok": True, "saved_files": saved_files})
+
+        if not route.endswith("/api/register"):
             return self.send_json({"error": "not found"}, 404)
 
         try:

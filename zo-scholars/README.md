@@ -6,20 +6,59 @@ are published from the same GitHub repository.
 
 ```
 zo-scholars/
-├── index.html          mission, introduction, mailing-list form, members table
+├── index.html          mission, introduction, mailing-list, submit article, members table
+├── articles.html       articles listing and submit article section
+├── article.html        individual article reader page
 ├── events.html         the upcoming events page
 ├── css/style.css       all styling
+├── js/articles-data.js ← the file you edit to publish articles
+├── js/articles.js      renders the articles listing
+├── js/article-detail.js renders full individual articles
+├── js/submit-article.js handles article upload & email to samuelzkh@gmail.com
 ├── js/events-data.js   ← the file you edit to add events
 ├── js/events.js        renders the events page
 ├── js/app.js           registration form + members table
 ├── js/xlsx.js          writes .xlsx files in the browser (no libraries)
-├── server.py           optional local server that writes a real Excel file
+├── server.py           optional local server for offline testing
 └── data/members.json   public members list shown on the live site
 ```
 
 ---
 
-## Editing the content
+## Article Submissions & Publishing
+
+Visitors and scholars can upload and submit articles directly through the **Submit an Article** section on `index.html` or `articles.html`.
+
+### How submissions reach you:
+1. When someone submits the form, it sends an email with the author details, title, summary, text, and any attached files (PDF, Word doc, etc.) directly to **`samuelzkh@gmail.com`**.
+2. *(First-time setup)*: The very first time a submission is sent through FormSubmit, FormSubmit will send a one-time activation confirmation email to `samuelzkh@gmail.com`. Click "Activate Form" once to start receiving all submissions.
+
+### How to publish a submitted article to the site:
+1. Open `zo-scholars/js/articles-data.js`.
+2. Add an entry to `ZO_ARTICLES`:
+```js
+{
+  id: "article-slug-id",
+  date: "2026-08-15",
+  label: "Article", // or "Sharing", "Video", "Tutorial"
+  title: "Title of the Article",
+  author: "Author Name (Affiliation)",
+  // If it's a PDF article, put the PDF file inside `zo-scholars/` and set:
+  pdfUrl: "filename.pdf",
+  // Or if it's text content:
+  content: [
+    "First paragraph...",
+    "Second paragraph..."
+  ],
+  // Or if it's a video:
+  videoUrl: "https://youtu.be/..."
+}
+```
+3. Commit and push the changes to GitHub. The live site updates immediately!
+
+---
+
+## Editing other content
 
 **The introduction** — open `index.html`, find the comment block that starts
 with `INTRODUCTION` (just above `<section id="introduction">`) and replace the
