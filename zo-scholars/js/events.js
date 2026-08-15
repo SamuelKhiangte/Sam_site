@@ -48,11 +48,39 @@
       body.appendChild(meta);
     }
 
+    if (item.topic) {
+      var topicP = document.createElement('p');
+      topicP.className = 'desc';
+      topicP.style.marginBottom = '8px';
+      topicP.innerHTML = '<strong>Topic:</strong> ' + item.topic;
+      body.appendChild(topicP);
+    }
+
+    if (item.abstract) {
+      var abstractP = document.createElement('p');
+      abstractP.className = 'desc';
+      abstractP.style.marginTop = '8px';
+      abstractP.style.lineHeight = '1.6';
+      abstractP.innerHTML = '<strong>Abstract:</strong> ' + item.abstract;
+      body.appendChild(abstractP);
+    }
+
     if (item.description) {
-      var desc = document.createElement('p');
-      desc.className = 'desc';
-      desc.textContent = item.description;
-      body.appendChild(desc);
+      if (Array.isArray(item.description)) {
+        item.description.forEach(function (d) {
+          var desc = document.createElement('p');
+          desc.className = 'desc';
+          desc.style.marginBottom = '8px';
+          desc.innerHTML = d;
+          body.appendChild(desc);
+        });
+      } else {
+        var desc = document.createElement('p');
+        desc.className = 'desc';
+        desc.style.whiteSpace = 'pre-line';
+        desc.innerHTML = item.description;
+        body.appendChild(desc);
+      }
     }
 
     if (item.link) {
@@ -102,6 +130,7 @@
     });
 
     upcoming.sort(function (a, b) {
+      if (!a.date && !b.date) return 0;
       if (!a.date) return 1;
       if (!b.date) return -1;
       return a.date - b.date;

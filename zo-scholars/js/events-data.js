@@ -16,13 +16,13 @@
 const ZO_EVENTS = [
 
   {
-    date: "2026-08-16",
-    time: "6:00 PM IST",
-    title: "Kick-off session — how this journal club will run",
-    speaker: "Organising team",
-    venue: "Zoom (link shared by mail)",
-    link: "",
-    description: "An opening meeting to agree on the reading schedule, how papers are chosen, and how presentations are shared out across the group. Open to everyone on the mailing list."
+    date: "2026-08-27",
+    time: "8:30 PM IST (Thursday)",
+    title: "Introduction leh student talk hmasa ber",
+    speaker: "Samuel Z Khiangte (Indian Institute of Science)",
+    venue: "Google Meet (link nakinah share a ni ang)",
+    topic: "Physicist in Biology a zir dan (Gentle introduction to statistical mechanics, soft matter physics, active matter physics, biophysical/statistical field theories)",
+    abstract: "Biology leh physics chu thil inhlat angin mi tam tak chuan kan ngai thei, amaherawhchu physics hmanga biology zir (biophysics) hi tunlai khawvela field thang lian chak ber pawl a ni tawh. Ka talk ah hian physics-a subject hlun, statistical mechanics / condensed matter te hi engtin nge biological system zir naah perspective thar min pek theih a, eng hlawkna nge an neih tih kan sawi dawn a ni. Biological system hrang hrang, cell cytoskeleton, immune system, epithelial cells, neurons leh cancer metastasis (cancer darh dan) te hi engtin nge physicst in a ngaihtuah dan leh model dan kan sawi bawk ang."
   },
 
   {
@@ -30,9 +30,20 @@ const ZO_EVENTS = [
     time: "TBD",
     title: "Research Talk",
     speaker: "Dr. Krista Roluahpuia (Asst. Professor, IIT Gandhinagar)",
-    venue: "Zoom (link shared by mail)",
+    venue: "Zoom / Google Meet (link shared by mail)",
     link: "",
     description: "Research talk by Dr. Krista Roluahpuia, Assistant Professor at IIT Gandhinagar. Date & time to be announced. Open to everyone on the mailing list."
+  },
+
+  {
+    date: "",
+    time: "November thla tawp / TBD",
+    title: "Faculty Talk: Fluid Mechanics / Fluid Instability",
+    speaker: "Dr. Lalrinpuia Tlau (NIT Puducherry, Mathematics)",
+    topic: "Fluid Mechanics / Fluid Instability",
+    venue: "Google Meet (link nakinah share a ni ang)",
+    link: "",
+    description: "Faculty talk on Fluid Mechanics and Fluid Instability by Dr. Lalrinpuia Tlau, Department of Mathematics, National Institute of Technology Puducherry. Scheduled for late November (November thla tawp)."
   }
 
 ];
