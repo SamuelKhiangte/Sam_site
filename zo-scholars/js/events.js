@@ -83,6 +83,66 @@
       }
     }
 
+    if (item.recording) {
+      var recBlock = document.createElement('div');
+      recBlock.className = 'event-recording';
+      recBlock.style.marginTop = '18px';
+
+      var recHeader = document.createElement('div');
+      recHeader.style.display = 'flex';
+      recHeader.style.alignItems = 'center';
+      recHeader.style.flexWrap = 'wrap';
+      recHeader.style.gap = '8px';
+      recHeader.style.marginBottom = '12px';
+
+      var recLabel = document.createElement('strong');
+      recLabel.textContent = 'Recording:';
+      recLabel.style.fontSize = '0.92rem';
+      recLabel.style.color = 'var(--blue-900)';
+      recHeader.appendChild(recLabel);
+
+      var recA = document.createElement('a');
+      recA.href = item.recording;
+      recA.target = '_blank';
+      recA.rel = 'noopener noreferrer';
+      recA.style.color = 'var(--blue-700)';
+      recA.style.textDecoration = 'underline';
+      recA.style.wordBreak = 'break-all';
+      recA.style.fontSize = '0.92rem';
+      recA.textContent = item.recording;
+      recHeader.appendChild(recA);
+
+      recBlock.appendChild(recHeader);
+
+      var videoId = '';
+      if (item.recording.indexOf('youtu.be/') > -1) {
+        videoId = item.recording.split('youtu.be/')[1].split(/[?#]/)[0];
+      } else if (item.recording.indexOf('v=') > -1) {
+        videoId = item.recording.split('v=')[1].split('&')[0];
+      }
+
+      if (videoId) {
+        var videoLink = document.createElement('a');
+        videoLink.href = item.recording;
+        videoLink.target = '_blank';
+        videoLink.rel = 'noopener noreferrer';
+        videoLink.className = 'video-preview';
+        
+        var img = document.createElement('img');
+        img.src = 'https://img.youtube.com/vi/' + videoId + '/hqdefault.jpg';
+        img.alt = (item.title || 'Event') + ' - Recording';
+        videoLink.appendChild(img);
+
+        var playBtn = document.createElement('div');
+        playBtn.className = 'video-play-btn';
+        videoLink.appendChild(playBtn);
+
+        recBlock.appendChild(videoLink);
+      }
+
+      body.appendChild(recBlock);
+    }
+
     if (item.link) {
       var actions = document.createElement('p');
       actions.style.margin = '16px 0 0';

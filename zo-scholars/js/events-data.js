@@ -19,10 +19,11 @@ const ZO_EVENTS = [
     date: "2026-08-27",
     time: "8:30 PM IST (Thursday)",
     title: "Introduction leh student talk hmasa ber",
-    speaker: "Samuel Z Khiangte (Indian Institute of Science)",
-    venue: "Google Meet (link nakinah share a ni ang)",
+    speaker: "Samuel Zomawia Khiangte (Indian Institute of Science)",
+    venue: "Google Meet",
     topic: "Physicist in Biology a zir dan (Gentle introduction to statistical mechanics, soft matter physics, active matter physics, biophysical/statistical field theories)",
-    abstract: "Biology leh physics chu thil inhlat angin mi tam tak chuan kan ngai thei, amaherawhchu physics hmanga biology zir (biophysics) hi tunlai khawvela field thang lian chak ber pawl a ni tawh. Ka talk ah hian physics-a subject hlun, statistical mechanics / condensed matter te hi engtin nge biological system zir naah perspective thar min pek theih a, eng hlawkna nge an neih tih kan sawi dawn a ni. Biological system hrang hrang, cell cytoskeleton, immune system, epithelial cells, neurons leh cancer metastasis (cancer darh dan) te hi engtin nge physicst in a ngaihtuah dan leh model dan kan sawi bawk ang."
+    abstract: "Biology leh physics chu thil inhlat angin mi tam tak chuan kan ngai thei, amaherawhchu physics hmanga biology zir (biophysics) hi tunlai khawvela field thang lian chak ber pawl a ni tawh. Ka talk ah hian physics-a subject hlun, statistical mechanics / condensed matter te hi engtin nge biological system zir naah perspective thar min pek theih a, eng hlawkna nge an neih tih kan sawi dawn a ni. Biological system hrang hrang, cell cytoskeleton, immune system, epithelial cells, neurons leh cancer metastasis (cancer darh dan) te hi engtin nge physicst in a ngaihtuah dan leh model dan kan sawi bawk ang.",
+    recording: "https://www.youtube.com/watch?v=GfI3v3-OYHA&t=721s"
   },
 
   {
