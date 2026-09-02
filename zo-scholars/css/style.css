@@ -68,9 +68,12 @@ body {
   gap: 10px;
 }
 
+.brand img,
 .brand-logo {
   width: 36px;
   height: 36px;
+  max-width: 36px;
+  max-height: 36px;
   border-radius: 50%;
   object-fit: cover;
   flex: none;
@@ -80,7 +83,8 @@ body {
   transition: transform 0.2s ease;
 }
 
-.brand:hover .brand-logo {
+.brand:hover .brand-logo,
+.brand:hover img {
   transform: scale(1.06);
 }
 
